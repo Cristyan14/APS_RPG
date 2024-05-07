@@ -21,7 +21,7 @@ public class Texto_Fase_01 extends Personagem_Principal {
 			+ "com isso você achou uma prova que pode incrimina-la futuramente! Meus parabens + nick";
 	
 	
-	public String txt03 = nome + "--------------------------------------------"
+	public String txt03 = "--------------------------------------------" + nome 
 			+ "Como o herói da nossa história, decide investigar o descarte\n irregular de lixo diretamente no rio, uma prática que tem causado danos\n significativos ao meio ambiente e à comunidade local.";
 	
 	public String txt04 = "--------------------------------------------"
