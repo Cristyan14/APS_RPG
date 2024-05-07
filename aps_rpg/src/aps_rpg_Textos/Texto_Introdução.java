@@ -39,6 +39,7 @@ public class Texto_Introdução extends Personagem_Principal{
 			+ " Sua jornada não é apenas uma aventura \népica, mas também uma poderosa mensagem de esperança e perseverança na \n"
 			+ "luta pela preservação ambiental.";
 
+	
 	public String getTxt01() {
 		return txt01;
 	}
@@ -66,6 +67,5 @@ public class Texto_Introdução extends Personagem_Principal{
 	public String getTxt07() {
 		return txt07;
 	}
-	
 	
 }
