@@ -6,22 +6,19 @@ import java.util.TimerTask;
 
 import aps_rpg_Textos.Texto_Introdução;
 
-public class Introducao {
+public class Introducao extends Personagem_Principal {
     private Scanner escrever;
 	private Texto_Introdução textoIntroducao;
 	private long delayp = 4000L; // 5 segundos em milissegundos
     Timer timer = new Timer();
 	
 	public Introducao(Scanner escrever, String nick) {
+		super(nick);
 		this.escrever = escrever;
 		textoIntroducao = new Texto_Introdução(nick);
 	}
 	
 	public void iniciarIntroducao() {
-        System.out.println("Bem Vindo caro jogador, seja bem-vindo(a) nesta jornada!");
-        System.out.println("Digite seu nickname: ");
-        String nick = Jogo.escrever.next();
-        Personagem_Principal p1 = new Personagem_Principal(nick);
         System.out.println("Pressione 0 para continuar...");
         int tecla1 = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
         if (tecla1 == 0) {
@@ -169,11 +166,15 @@ public class Introducao {
 		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
 		}
 		
-        // Restante do código...
+		try {
+            Thread.sleep(delayp);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 	
 	public void iniciarTexto01() {
-		System.out.println("Fase 1 - Jornada pelo Rio Tietê");
+		System.out.println("Introdução - Jornada pelo Rio Tietê");
 		System.out.println("------------------------------");
 		System.out.println(textoIntroducao.getTxt01());
 	}
