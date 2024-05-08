@@ -4,11 +4,15 @@ import java.util.Random;
 
 public class Personagem_Principal {
     public String nome;
+    private int ataque;
+    private int vida;
+    private int maxVida;
     
     public Personagem_Principal(String nome) {
         this.nome = nome;
         this.ataque = 7 + new Random().nextInt(9); // Gera um número entre 7 e 15
         this.vida = 80;
+        this.setMaxVida(80);
     }
     
     public String getNome() {
@@ -39,10 +43,14 @@ public class Personagem_Principal {
 	public void setVida(int vida) {
 		this.vida = vida;
 	}
+	
+	public int getMaxVida() {
+		return maxVida;
+	}
 
-	private int ataque;
-    private int vida;
-
+	public void setMaxVida(int maxVida) {
+		this.maxVida = maxVida;
+	}
 
     public void usarPocao() {
         Random rand = new Random();
@@ -59,4 +67,7 @@ public class Personagem_Principal {
     public String toString() {
         return "Seja bem vindo(a) " + nome;
     }
+
 }
+
+	
