@@ -14,7 +14,17 @@ public class Jogo {
         System.out.println("Digite seu nickname: ");
         String nick = escrever.next();
  
-
+        Introducao introducao = new Introducao(escrever, nick);
+        introducao.iniciarIntroducao();
+		// Fim Introdução
+		
+		// Inicio FASE - 1
+        Fase_1 fase1 = new Fase_1(nick);
+		System.out.println("Ao iniciar usa jornada "+ nick + ", você percebe algumas fontes de poluição.");
+		System.out.println("Digite [1] para investigar os Esgotos Industriais.\nDigite [2] para investigar o Descarte irregular de lixo.");
+		int escolhaF01 = escrever.nextInt();
+		fase1.escolha(escolhaF01);
+		
 		// Fim FASE - 1
 		
 		// Inicio FASE - 2
