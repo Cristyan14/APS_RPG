@@ -1,24 +1,34 @@
 package aps_rpg;
 
+import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import aps_rpg_Textos.Texto_Fase_01;
+import aps_rpg_Textos.Texto_Fase_03;
 
 public class Fase_1 extends Personagem_Principal{
+		private Scanner escrever = new Scanner(System.in);
+		private long delay = 4000L;
 		public Fase_1(String nome) {
 			super(nome);
 			nome = this.nome;
 
 		}
 
-		
-
+		public void pausaBreve() {
+		    try {
+		        Thread.sleep(2000); // Pausa por 2 segundo
+		    } catch (InterruptedException e) {
+		        e.printStackTrace();
+		 }
+		}
 
 		public int valor;
 
 		public boolean a = false;
 		public boolean b = false;
+		private long delayp;
 		public boolean getA() {
 			return a;
 		}
@@ -40,6 +50,7 @@ public class Fase_1 extends Personagem_Principal{
 			this.valor = valor;
 		}
 		public void escolha(int valor) {
+				this.delayp = 4000L;
 				Texto_Fase_01 textoFase01 = new Texto_Fase_01(nome); 
 		        if (valor == 1) {
 		        	 this.a = true;
@@ -100,7 +111,21 @@ public class Fase_1 extends Personagem_Principal{
 		            }, 3000); 
 		        } else {
 		            System.out.println("Opção inválida.");
+		            pausaBreve();
+		        }
+		    	try {
+		            Thread.sleep(this.delayp);
+		        } catch (InterruptedException e) {
+		            e.printStackTrace();
 		        }
 		    }
+	
 		
+		public void retornar() {
+			System.out.println("Ao iniciar usa jornada "+ this.nome + ", você percebe algumas fontes de poluição.");
+			pausaBreve();
+			System.out.println("Digite [1] para investigar os Esgotos Industriais.\nDigite [2] para investigar o Descarte irregular de lixo.");
+			int escolhaF01 = escrever.nextInt();
+			escolha(escolhaF01);
+		}
 }

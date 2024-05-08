@@ -15,17 +15,22 @@ public class Jogo {
         String nick = escrever.next();
         Personagem_Principal jogador = new Personagem_Principal(nick);
  
+        Personagem_Principal p = new Personagem_Principal(nick);
         Introducao introducao = new Introducao(escrever, nick);
         introducao.iniciarIntroducao();
+        long delayp = 4000L;
 		// Fim Introdução
 		
 		// Inicio FASE - 1
         Fase_1 fase1 = new Fase_1(nick);
-		System.out.println("Ao iniciar usa jornada "+ nick + ", você percebe algumas fontes de poluição.");
-		System.out.println("Digite [1] para investigar os Esgotos Industriais.\nDigite [2] para investigar o Descarte irregular de lixo.");
-		int escolhaF01 = escrever.nextInt();
-		fase1.escolha(escolhaF01);
 		
+
+		fase1.retornar();
+		try {
+            Thread.sleep(delayp);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 		// Fim FASE - 1
 		
 		// Inicio FASE - 2
@@ -37,7 +42,7 @@ public class Jogo {
 		// Fim FASE - 2
 		
 		
-		// Inicio FASE - 3
+		// Inicio FASE - 2
 		Fase_3 fase3 = new Fase_3(nick);
 		fase3.retornar();
 		
