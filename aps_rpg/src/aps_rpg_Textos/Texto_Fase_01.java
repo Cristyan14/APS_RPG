@@ -8,7 +8,7 @@ public class Texto_Fase_01 extends Personagem_Principal {
 		nome = this.nome;
 	}
 
-	public String txt01 = "--------------------------------------------"
+	public String txt01 = "----------------------- Fase 01 -----------------------"
 			+ "\n Você "+ nome +", uma escada em uma fabrica proxíma a margem do rio e decide descer para investiga-la.\n"
 			+ "Enquanto voce desce pelas escadas enferrujadas\n"
 			+ "até as entranhas escuras da fabrica, você encontra evidências \n"
@@ -19,7 +19,7 @@ public class Texto_Fase_01 extends Personagem_Principal {
 			+ "\n Você "+ nome+ " encontra uma pequena lata de ervilha e vê que na sua embalagem aponta para MegaCorporation,\n"
 			+ " uma grande empresa de sua época que fabríca diversos tipos de produtos. A fabríca que você entrou na verdade \n"
 			+ "é uma fabríca desativada da MegaCorporation, \n"
-			+ "com isso você achou uma prova que pode incrimina-la futuramente! Meus parabens" + nome;
+			+ "com isso você achou uma prova que pode incrimina-la futuramente! Meus parabens, " + nome+"!";
 	
 	
 	public String txt03 = "--------------------------------------------\n" + nome 

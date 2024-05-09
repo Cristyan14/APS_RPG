@@ -9,7 +9,7 @@ public class Texto_Fase_03  extends Personagem_Principal{
 		// TODO Auto-generated constructor stub
 	}
 
-	public String txt01 = "----------------------- Fase 03----------"
+	public String txt01 = "----------------------- Fase 03 -----------------------"
 			+ "\nApós uma longa jornada, você "+nome+ " irá começar a restauração da vida aquática no rio.\nAo começar sua navegação você"
 			+ "se depara com um Cardume Voraz de peixes \nmutantes que foram jogados pela MegaCorporation como seus animais de testes.";
 	

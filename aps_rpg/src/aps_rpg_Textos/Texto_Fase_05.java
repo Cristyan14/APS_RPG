@@ -9,7 +9,7 @@ public class Texto_Fase_05 extends Personagem_Principal {
 		// TODO Auto-generated constructor stub
 	}
 
-		public String txt01 = "--------------------------\n"+ nome + " , você recebeu um convite especial para a grande celebração da recuperação do Rio Tietê.\n"
+		public String txt01 = "----------------------- Fase 05 -----------------------\n"+ nome + " , você recebeu um convite especial para a grande celebração da recuperação do Rio Tietê.\n"
 				+ " Eles são convidados a participar de um evento de gala junto com os líderes da comunidade, autoridades e \n"
 				+ "outros heróis ambientais.\n"
 				+ "--------------------------\n";
