@@ -20,10 +20,10 @@ public class Jogo {
 		// Fim Introdução
 		
 		// Inicio FASE - 1
-        Fase_1 fase1 = new Fase_1(nick);
+        Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
 		
 
-		fase1.retornar();
+		fase1.retornar(); // Iniciar Fase 1 comentado
 
 		// Fim FASE - 1
 		
@@ -37,8 +37,8 @@ public class Jogo {
 		
 		
 		// Inicio FASE - 3
-		Fase_3 fase3 = new Fase_3(nick);
-		fase3.retornar();
+		Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
+		 fase3.retornar(); // Iniciar Fase 3 comentado
 		
 		
 		
@@ -48,12 +48,12 @@ public class Jogo {
 		
 		// Inicio Fase - 4
 		
-		Inimigos.batalha(p);
+		Inimigos.batalha(p);// Iniciar Fase 4(batalha) comentado
 		// Fim Fase - 4
 		
 		
 		// Inicio Fase - 5
-		
+		Fase_5 fase5 = new  Fase_5(nick);
 		
 		
 		// Fim Fase - 5
