@@ -73,12 +73,13 @@ public class Fase_3 extends Personagem_Principal {
 		Escolha(opcao);
 		boolean vencer = false;
 		if(this.opcao == 1) {
+			System.out.println(texto_fase_03.txt03);
+			 pausaBreve();
 			while(vencer != true) {
 				int valor= r.nextInt(5) + 1;
 				int valorJogador = r.nextInt(5) + 1;
 				if(escolhaA == true) {
-					System.out.println(texto_fase_03.txt03);
-					 pausaBreve();
+				
 					System.out.println(texto_fase_03.txt04);
 					 pausaBreve();
 					this.opcao = escrever.nextInt();
@@ -97,11 +98,13 @@ public class Fase_3 extends Personagem_Principal {
 				}
 			}
 		}else if(this.opcao == 2) {
+			System.out.println(texto_fase_03.txt05);
+			pausaBreve();
 			while(vencer != true) {
 				int valor= r.nextInt(5) + 11;
 				int valorJogador = r.nextInt(5) + 11;
 				if(escolhaB == true) {
-					System.out.println(texto_fase_03.txt05);
+
 					System.out.println(texto_fase_03.txt06);
 					this.opcao = escrever.nextInt();
 					Escolha(opcao);

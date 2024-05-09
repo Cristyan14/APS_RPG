@@ -123,9 +123,9 @@ public class Fase_1 extends Personagem_Principal{
 			int escolhaF01 = escrever.nextInt();
 			escolha(escolhaF01);
 			if (escolhaF01 == 1) {
-				pausaBreve(50000);
+				pausaBreve(5000);
 			}else if(escolhaF01 == 2) {
-				pausaBreve(12000);
+				pausaBreve(15000);
 			}
 			
 			try {

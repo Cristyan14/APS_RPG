@@ -16,8 +16,7 @@ public class Jogo {
 
         Personagem_Principal p = new Personagem_Principal(nick);
         Introducao introducao = new Introducao(escrever, nick);
-
-        long delayp = 4000L;
+        introducao.iniciarIntroducao();
 		// Fim Introdução
 		
 		// Inicio FASE - 1
@@ -28,7 +27,7 @@ public class Jogo {
 
 		// Fim FASE - 1
 		
-		// Inicio FASE - 2
+		// Inicio FASE - 2 Renato Está Fazendo
 		
 		
 		
@@ -37,20 +36,27 @@ public class Jogo {
 		// Fim FASE - 2
 		
 		
-		// Inicio FASE - 2
+		// Inicio FASE - 3
 		Fase_3 fase3 = new Fase_3(nick);
 		fase3.retornar();
 		
 		
 		
 		
-		// Fim FASE - 2
+		// Fim FASE - 3
 		
 		
 		// Inicio Fase - 4
 		
 		Inimigos.batalha(p);
 		// Fim Fase - 4
+		
+		
+		// Inicio Fase - 5
+		
+		
+		
+		// Fim Fase - 5
 		escrever.close();
 	}
 }
