@@ -120,7 +120,7 @@ public class Fase_3 extends Personagem_Principal {
 							System.out.println("Você perdeu :( \nTente denovo! Não desista!");
 							 pausaBreve();
 						}
-						vencer = true;
+				
 					}else if(this.opcao == 2) {
 						if(valorJogador > valor) {
 							System.out.println("Você venceu!!!");
