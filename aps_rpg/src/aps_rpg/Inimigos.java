@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Inimigos{
 	public int vidaInimigo;
     public String nomeInimigo;
-    
     public int ataqueInimigo;
+    
     public int getAtaqueInimigo() {
 		return ataqueInimigo;
 	}
@@ -15,19 +15,6 @@ public class Inimigos{
 		this.ataqueInimigo = ataqueInimigo;
 	}
 	
-	public static void clearConsole() {
-	    try {
-	        final String os = System.getProperty("os.name");
-	        if (os.contains("Windows")) {
-	            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-	        } else {
-	            new ProcessBuilder("bash", "-c", "clear").inheritIO().start().waitFor();
-	        }
-	    } catch (final Exception e) {
-	        System.out.println("Erro ao limpar o console: " + e.getMessage());
-	    }
-	}
-
 	public int getVidaInimigo() {
 		return vidaInimigo;
 	}
@@ -73,6 +60,14 @@ public class Inimigos{
         return inimigos[n];
     }
     
+    public static void pausaBreve() {
+	    try {
+	        Thread.sleep(5000); // Pausa por 2 segundo
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
+    
     public static void batalha(Personagem_Principal jogador) {
         Inimigos inimigo = new Inimigos();
         int vidaMaxInimigo = inimigo.vidaInimigo;
@@ -89,7 +84,6 @@ public class Inimigos{
         }
 
         while (true) {
-            clearConsole();
             System.out.println("=============== B A T A L H A ===============\n");
             System.out.println(inimigo.nomeInimigo + "\nHP: " + inimigo.vidaInimigo + "/" + vidaMaxInimigo);
             System.out.println(jogador.nome + "\nHP: " + jogador.getVida() + "/" + jogador.getMaxVida());
@@ -130,6 +124,7 @@ public class Inimigos{
             } else if (tecla == 3) {
                 // Pedir arrego
                 System.out.println(jogador.nome + " desiste da batalha e pede arrego!");
+                pausaBreve();
                 break; // Sai do loop da batalha
             } else {
                 // Tecla inválida
@@ -139,7 +134,15 @@ public class Inimigos{
             // Verifica se o jogador ou o inimigo foram derrotados
             if (jogador.getVida() <= 0) {
                 System.out.println("Você foi derrotado por " + inimigo.nomeInimigo + "!");
-                break; // Sai do loop da batalha
+                pausaBreve();
+                System.out.println("A população oferece apoio moral e te enche de determinação...!");
+                pausaBreve();
+                System.out.println("Enquanto isso... "+inimigo.nomeInimigo+" aproveitou pra descansar e recuperar sua vida.");
+                pausaBreve();
+                System.out.println("Tente novamente e não deixe barato dessa vez!");
+                jogador.setVida(80);
+                inimigo.setVidaInimigo(vidaMaxInimigo);
+                pausaBreve();
             } else if (inimigo.vidaInimigo <= 0) {
                 System.out.println(jogador.getNome()+" derrotou " + inimigo.nomeInimigo + "!");
                 break; // Sai do loop da batalha

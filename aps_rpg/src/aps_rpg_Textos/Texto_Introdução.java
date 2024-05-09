@@ -29,7 +29,7 @@ public class Texto_Introdução extends Personagem_Principal{
 			+ " Juntos, vocês formam uma força imparável, determinada a restaurar a beleza natural do Rio Tietê.";
 	
 	public String txt05 = "À medida que as fases avançam, você enfrenta cinco desafios distintos, cada um mais perigoso que o anterior.\n "
-			+ "Desde confrontos épicos com chefes \nde fase até missões de resgate de animais em perigo, sua jornada é uma \n"
+			+ "Desde confrontos épicos com vilões \n até missões de pesca de peixes mutantes, sua jornada é uma \n"
 			+ "verdadeira odisséia pela preservação do meio ambiente.";
 	
 	public String txt06 = "No final, após superar todos os obstáculos e derrotar os vilões que ameaçavam o Rio Tietê, \n"

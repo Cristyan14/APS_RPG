@@ -64,7 +64,7 @@ public class Fase_3 extends Personagem_Principal {
 	    }
 	}
 	
-	public void retornar() {
+	public void retornar(Personagem_Principal jogador) {
 		System.out.println(texto_fase_03.txt01);
 		 pausaBreve();
 		System.out.println(texto_fase_03.txt02);
@@ -86,8 +86,17 @@ public class Fase_3 extends Personagem_Principal {
 					Escolha(opcao);
 					if(valorJogador > valor) {
 						System.out.println("Você venceu!!!");
-						vencer = true;
 						 pausaBreve();
+						 System.out.println(texto_fase_03.txt07);
+						 pausaBreve();
+						 pausaBreve();
+						 System.out.println(texto_fase_03.txt08);
+						 pausaBreve();
+						 Inimigos_Peixes.batalha(jogador);
+						 Inimigos_Peixes.batalha(jogador);
+						 System.out.println(texto_fase_03.txt09);
+						 pausaBreve();
+						 vencer = true;
 					}else if(valorJogador == valor) {
 						System.out.println("Quase!!! Tente novamente!!");
 						 pausaBreve();
@@ -111,8 +120,17 @@ public class Fase_3 extends Personagem_Principal {
 					if(this.opcao == 1) {
 						if(valorJogador > valor) {
 							System.out.println("Você venceu!!!");
+							pausaBreve();
+							 System.out.println(texto_fase_03.txt07);
 							 pausaBreve();
-							vencer = true;
+							 pausaBreve();
+							 System.out.println(texto_fase_03.txt08);
+							 pausaBreve();
+							 Inimigos_Peixes.batalha(jogador);
+							 Inimigos_Peixes.batalha(jogador);
+							 System.out.println(texto_fase_03.txt09);
+							 pausaBreve();
+							 vencer = true;
 						}else if(valorJogador == valor) {
 							System.out.println("Quase!!! Tente novamente!!");
 							 pausaBreve();
@@ -125,7 +143,16 @@ public class Fase_3 extends Personagem_Principal {
 						if(valorJogador > valor) {
 							System.out.println("Você venceu!!!");
 							 pausaBreve();
-							vencer = true;
+							 System.out.println(texto_fase_03.txt07);
+							 pausaBreve();
+							 pausaBreve();
+							 System.out.println(texto_fase_03.txt08);
+							 pausaBreve();
+							 Inimigos_Peixes.batalha(jogador);
+							 Inimigos_Peixes.batalha(jogador);
+							 System.out.println(texto_fase_03.txt09);
+							 pausaBreve();
+							 vencer = true;
 						}else if(valorJogador == valor) {
 							System.out.println("Quase!!! Tente novamente!!");
 							 pausaBreve();

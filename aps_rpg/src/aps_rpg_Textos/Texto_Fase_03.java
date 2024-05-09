@@ -27,6 +27,16 @@ public class Texto_Fase_03  extends Personagem_Principal{
 	
 	public String txt06 = "Digite [1] para golpear o cardume usando suas maõs\n"
 			+ "Digite [2] para golpear o cardume usando uma tronco de Eucalipto que você encontrou nas margens do rio";
+	
+	public String txt07 = "...Porém, algums peixes rebeldes que haviam saído do cardume observam o que você fez.\n"
+			+ "E eles não parecem muito contentes...";
+	
+	public String txt08 = nome+" vê duas sombras do fundo de rio se aproximando...\n";
+	
+	public String txt09 = "-----------------------\n"
+			+ "Ufa! Essa foi por pouco... "+nome+" derrota os peixes tóxicos restantes, livrando a vida aquática do rio das mais\n"
+			+ "aterrorizantes espécies de predadores injustos.";
+	
 
 	public String getTxt01() {
 		return txt01;
