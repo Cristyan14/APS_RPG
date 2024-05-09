@@ -15,22 +15,18 @@ public class Jogo {
         String nick = escrever.next();
 
         Personagem_Principal p = new Personagem_Principal(nick);
+        
         Introducao introducao = new Introducao(escrever, nick);
         introducao.iniciarIntroducao();
 		// Fim Introdução
 		
 		// Inicio FASE - 1
         Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
-		
-
 		fase1.retornar(); // Iniciar Fase 1 comentado
-
 		// Fim FASE - 1
 		
+		
 		// Inicio FASE - 2 Renato Está Fazendo
-		
-		
-		
 		
 		
 		// Fim FASE - 2
@@ -39,22 +35,18 @@ public class Jogo {
 		// Inicio FASE - 3
 		Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
 		 fase3.retornar(); // Iniciar Fase 3 comentado
-		
-		
-		
-		
 		// Fim FASE - 3
 		
 		
 		// Inicio Fase - 4
-		
-		Inimigos.batalha(p);// Iniciar Fase 4(batalha) comentado
+		Fase_4 fase4 = new Fase_4(nick);
+		fase4.retornar(p);// Iniciar Fase 4(batalha) comentado
 		// Fim Fase - 4
 		
 		
 		// Inicio Fase - 5
 		Fase_5 fase5 = new  Fase_5(nick);
-		
+		fase5.IniciarFase5();
 		
 		// Fim Fase - 5
 		escrever.close();

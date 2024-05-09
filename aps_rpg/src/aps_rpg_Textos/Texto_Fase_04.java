@@ -19,8 +19,10 @@ public String txt02 = "--------------------------------------------\n"
 			+ "Você só não contava com um detalhe.... A Máfia Política, que se opõe aos esforços de conscientização e preservação do rio, se aproxima!!!";
 
 public String txt03 = "--------------------------------------------\n" 
-			+ "Eles espalham desinformação e tentam impedir a população de se envolver na causa, visando proteger seus interesses corruptos."
+			+ "Eles espalham desinformação e tentam impedir a população de se envolver na causa, visando proteger seus interesses corruptos.\n"
 			+ nome+", como líder da campanha de conscientização, deve enfrentá-los!\n";
+
+public String pausaDramatica = "...";
 
 public String txt04 = "--------------------------------------------\n"
 			+ "Apesar dos obstáculos, você persiste e mobiliza a comunidade para resistir à influência da Máfia Política.\n"

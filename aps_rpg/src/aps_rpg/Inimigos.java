@@ -142,7 +142,6 @@ public class Inimigos{
                 break; // Sai do loop da batalha
             } else if (inimigo.vidaInimigo <= 0) {
                 System.out.println(jogador.getNome()+" derrotou " + inimigo.nomeInimigo + "!");
-                jogador.setVida(80);
                 break; // Sai do loop da batalha
             }
 
@@ -154,6 +153,5 @@ public class Inimigos{
             }
         }
 
-        scanner.close(); // Fecha o scanner
     }
 }
