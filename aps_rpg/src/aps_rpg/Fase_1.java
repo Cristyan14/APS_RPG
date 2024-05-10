@@ -52,18 +52,41 @@ public class Fase_1 extends Personagem_Principal{
 		}
 		public void escolha(int valor) {
 			Texto_Fase_01 textoFase01 = new Texto_Fase_01(nome); 
+
 	        if (valor == 1) {
 	        	 this.a = true;
 	             System.out.println(textoFase01.txt01);
-
+	             pausaBreve(2000);
+	             System.out.println("--------------------------");
+                 System.out.println("Digite 0 para continuar...");
+                 System.out.println("--------------------------");
+	             int tecla1 = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+	             if (tecla1 == 0) {
+	                 TimerTask task1 = new TimerTask() {
+	                     public void run() {
+	                    	 Timer timer = new Timer();
+	        	             timer.schedule(new TimerTask() {
+	        	                 @Override
+	        	                 public void run() {
+	        	                     System.out.println(textoFase01.txt02);	        	      	    	    	           	    	    	                 
+	        	                 }
+	        	                 
+	        	             }, 3000); // 3000 milissegundos = 2 segundos
+	        	           
+	         
+	                     }
+	                     
+	                 };
+	                
+	         
+	                 long delay = 2000L; // 5 segundos em milissegundos
+	     			 Timer timer = new Timer();
+					timer.schedule(task1, delay);
+	             } else {
+	                 System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
+	             }
 	             // Atraso antes de mostrar o texto 02
-	             Timer timer = new Timer();
-	             timer.schedule(new TimerTask() {
-	                 @Override
-	                 public void run() {
-	                     System.out.println(textoFase01.txt02);
-	                 }
-	             }, 3000); // 3000 milissegundos = 2 segundos
+	            
 	        } else if (valor == 2) {
 	            this.b = true;
 	            Timer timer3 = new Timer();
@@ -123,17 +146,24 @@ public class Fase_1 extends Personagem_Principal{
 			int escolhaF01 = escrever.nextInt();
 			escolha(escolhaF01);
 			if (escolhaF01 == 1) {
-				pausaBreve(5000);
+				pausaBreve(4000);
 			}else if(escolhaF01 == 2) {
 				pausaBreve(15000);
 			}
-			
+
 			try {
 	            Thread.sleep(this.delay);
 	        } catch (InterruptedException e) {
 	            e.printStackTrace();
 	        }
-			
+			int tecla2 = 1;
+		    while(tecla2 != 0 ) {
+                 System.out.println("--------------------------");
+                 System.out.println("Digite 0 para continuar...");
+                 int tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+                 System.out.println("--------------------------\n");
+                 tecla2 = tecla2a;
+             }
 			
 		}
 }

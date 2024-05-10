@@ -19,7 +19,9 @@ public class Introducao extends Personagem_Principal {
 	}
 	
 	public void iniciarIntroducao() {
-        System.out.println("Pressione 0 para continuar...");
+		System.out.println("--------------------------");
+        System.out.println("Digite 0 para continuar...");
+        System.out.println("--------------------------");
         int tecla1 = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
         if (tecla1 == 0) {
             TimerTask task1 = new TimerTask() {
@@ -37,7 +39,9 @@ public class Introducao extends Personagem_Principal {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Pressione 0 para continuar...");
+        System.out.println("--------------------------");
+        System.out.println("Digite 0 para continuar...");
+        System.out.println("--------------------------");
 		int tecla2 = escrever.nextInt(); // Aguarda a entrada do usuário
 		if (tecla2 == 0) {
 		    TimerTask task2 = new TimerTask() {
@@ -59,7 +63,9 @@ public class Introducao extends Personagem_Principal {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-		System.out.println("Pressione 0 para continuar...");
+		System.out.println("--------------------------");
+        System.out.println("Digite 0 para continuar...");
+        System.out.println("--------------------------");
 		int tecla3 = escrever.nextInt(); // Aguarda a entrada do usuário
 		if (tecla3 == 0) {
 		    TimerTask task3 = new TimerTask() {
@@ -82,130 +88,28 @@ public class Introducao extends Personagem_Principal {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-		System.out.println("Pressione 0 para continuar...");
-		int tecla4 = escrever.nextInt(); // Aguarda a entrada do usuário
-		if (tecla4 == 0) {
-		    TimerTask task4 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto04();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task4, delay);
-
-		
-		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
-		}
 		
 		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-		System.out.println("Pressione 0 para continuar...");
-		int tecla5 = escrever.nextInt(); // Aguarda a entrada do usuário
-		if (tecla5 == 0) {
-		    TimerTask task5 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto05();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task5, delay);
-
-		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
-		}
-		
-		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-		System.out.println("Pressione 0 para continuar...");
-		int tecla6 = escrever.nextInt(); // Aguarda a entrada do usuário
-		if (tecla6 == 0) {
-		    TimerTask task6 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto06();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task6, delay);
-
-	
-		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
-		}
-		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-		System.out.println("Pressione 0 para continuar...");
-		int tecla7 = escrever.nextInt(); // Aguarda a entrada do usuário
-		if (tecla7 == 0) {
-		    TimerTask task7 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto07();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task7, delay);
-
-
-		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
-		}
-		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 	
 	public void iniciarTexto01() {
-		System.out.println("Introdução - Jornada pelo Rio Tietê");
-		System.out.println("------------------------------");
 		System.out.println(textoIntroducao.getTxt01());
+		System.out.println("------------------------------");
 	}
 	
 	public void iniciarTexto02() {
 		System.out.println("------------------------------");
 		System.out.println(textoIntroducao.getTxt02());
+		System.out.println("------------------------------");
 	}
 	
 	public void iniciarTexto03() {
 		System.out.println("------------------------------");
 		System.out.println(textoIntroducao.getTxt03());
+		System.out.println("------------------------------");
 	}
 	
-	public void iniciarTexto04() {
-		System.out.println("------------------------------");
-		System.out.println(textoIntroducao.getTxt04());
-	}
+
 	
-	public void iniciarTexto05() {
-		System.out.println("------------------------------");
-		System.out.println(textoIntroducao.getTxt05());
-	}
-	
-	public void iniciarTexto06() {
-		System.out.println("------------------------------");
-		System.out.println(textoIntroducao.getTxt06());
-	}
-	
-	public void iniciarTexto07() {
-		System.out.println("------------------------------");
-		System.out.println(textoIntroducao.getTxt07());
-	}
+
 }
