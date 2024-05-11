@@ -21,7 +21,7 @@ public class Texto_Fase_05 extends Personagem_Principal {
 		
 		// Escolha 1
 		public String txt03 = "--------------------------\n"
-				+ "Você aceita o convite e se prepara para o grande evento.\n"
+				+ " Você aceita o convite e se prepara para o grande evento.\n"
 				+ " Eles passam horas refletindo sobre sua jornada, sobre os desafios enfrentados e as lições aprendidas ao longo do caminho.\n"
 				+ " Finalmente, chega o momento da celebração. O jogador sobe ao palco, diante de uma plateia ansiosa, e compartilha sua história inspiradora.\n"
 				+ "--------------------------\n";

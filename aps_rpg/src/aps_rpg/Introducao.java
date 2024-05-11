@@ -19,10 +19,15 @@ public class Introducao extends Personagem_Principal {
 	}
 	
 	public void iniciarIntroducao() {
-		System.out.println("--------------------------");
-        System.out.println("Digite 0 para continuar...");
-        System.out.println("--------------------------");
-        int tecla1 = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		int tecla1a = 1;
+		
+		while(tecla1a != 0) {
+			System.out.println("--------------------------");
+	        System.out.println("Digite 0 para continuar...");
+	        System.out.println("--------------------------");
+	        tecla1a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		}
+		int tecla1 = tecla1a;
         if (tecla1 == 0) {
             TimerTask task1 = new TimerTask() {
                 public void run() {
@@ -39,10 +44,16 @@ public class Introducao extends Personagem_Principal {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("--------------------------");
-        System.out.println("Digite 0 para continuar...");
-        System.out.println("--------------------------");
-		int tecla2 = escrever.nextInt(); // Aguarda a entrada do usuário
+        
+        
+        int tecla2a = 1;
+		while(tecla2a != 0) {
+			System.out.println("--------------------------");
+	        System.out.println("Digite 0 para continuar...");
+	        System.out.println("--------------------------");
+	        tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		}
+		int tecla2 = tecla2a;
 		if (tecla2 == 0) {
 		    TimerTask task2 = new TimerTask() {
 		        public void run() {
@@ -63,10 +74,14 @@ public class Introducao extends Personagem_Principal {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-		System.out.println("--------------------------");
-        System.out.println("Digite 0 para continuar...");
-        System.out.println("--------------------------");
-		int tecla3 = escrever.nextInt(); // Aguarda a entrada do usuário
+		int tecla3a = 1;
+		while(tecla3a != 0) {
+			System.out.println("--------------------------");
+	        System.out.println("Digite 0 para continuar...");
+	        System.out.println("--------------------------");
+	        tecla3a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		}
+		int tecla3 = tecla3a;
 		if (tecla3 == 0) {
 		    TimerTask task3 = new TimerTask() {
 		        public void run() {
@@ -89,6 +104,7 @@ public class Introducao extends Personagem_Principal {
             e.printStackTrace();
         }
 		
+		finalizar();
 		
     }
 	
@@ -109,6 +125,16 @@ public class Introducao extends Personagem_Principal {
 		System.out.println("------------------------------");
 	}
 	
+	public void finalizar() {
+		int tecla2 = 1;
+	    while(tecla2 != 0 ) {
+             System.out.println("--------------------------");
+             System.out.println("Digite 0 para continuar...");
+             int tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+             System.out.println("--------------------------\n");
+             tecla2 = tecla2a;
+         }
+	}
 
 	
 

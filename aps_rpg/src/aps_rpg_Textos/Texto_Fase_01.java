@@ -9,17 +9,23 @@ public class Texto_Fase_01 extends Personagem_Principal {
 	}
 
 	public String txt01 = "----------------------- Fase 01 -----------------------"
-			+ "\n Você "+ nome +", uma escada em uma fabrica proxíma a margem do rio e decide descer para investiga-la.\n"
+			+ "\n Você "+ nome +", uma escada em uma fabrica proxíma a margem do rio em uma floresta tenebrosa e decide descer para investiga-la.\n"
 			+ "Enquanto voce desce pelas escadas enferrujadas\n"
 			+ "até as entranhas escuras da fabrica, você encontra evidências \n"
-			+ "perturbadoras de negligência ambiental. Produtos químicos tóxicos poluem as águas, \n"
+			+ "perturbadoras de negligência ambiental acabando com a sustentabilidade da região. Produtos químicos tóxicos poluem as águas, \n"
 			+ "criaturas mutantes vagueiam pelos túneis e indícios de atividades criminosas são abundantes..";
 	
 	public String txt02 = "--------------------------------------------"
-			+ "\n Você "+ nome+ " encontra uma pequena lata de ervilha e vê que na sua embalagem aponta para MegaCorporation,\n"
-			+ " uma grande empresa de sua época que fabríca diversos tipos de produtos. A fabríca que você entrou na verdade \n"
-			+ "é uma fabríca desativada da MegaCorporation, \n"
-			+ "com isso você achou uma prova que pode incrimina-la futuramente! Meus parabens, " + nome+"!";
+			+ "\n Você "+ nome+ " encontra diversas latas de ervilhas e vê que em suas embalagens aponta para MegaCorporation,\n"
+			+ " uma grande empresa quem vem gerando grande poluição ao meio ambiente, destruindo o ecossistema.\nA fabríca que você entrou na verdade \n"
+			+ "é uma fabríca desativada da MegaCorporation, e percebe "
+			+ "não é mais feita reciclagem do lixo. ";
+	
+	public String txt08 = "--------------------------------------------\n"
+			+ "Você, ao tentar sair da fábrica, se depara com um terrivél jogo da forca!! Onde você deve adivinhar uma palavra chave para fugir\n"
+			+ "Ao olhar na parede, vê uma dica deixada por outro herói que diz que a palavra chave é relacionado ao meio ambiente\n"
+			+ "E que foi escrita em um dos dois textos anteriores!\n"
+			+ "OBS:(Não precisa ter acentuação, somente caracteres, sem números.)";
 	
 	
 	public String txt03 = "--------------------------------------------\n" + nome 
@@ -29,11 +35,10 @@ public class Texto_Fase_01 extends Personagem_Principal {
 			+ "À medida que você se aproxima do rio, o cheiro pútrido e a visão desoladora\b de lixo flutuando na água deixam claro que o problema é sério. Entre os\n detritos, você avista plásticos, garrafas quebradas, sacolas e até mesmo alguns produtos químicos suspeitos.";
 
 	public String txt05 = "--------------------------------------------\n"
-			+ "Ao examinar mais de perto, você encontra evidências que sugerem que o \ndescarte irregular é feito por moradores da região. Cartas, recibos e até \nmesmo fotos pessoais são encontradas misturadas ao lixo. Isso indica que os \npróprios habitantes locais estão contribuindo para a poluição do rio.";
-	
+			+ "Você então, percebe que um grupo de moradores estão jogando lixo naquele momento\n"
+			+ "E então decidi os confrontar!";
 	public String txt06 = "--------------------------------------------\n"
-			+ "Enquanto você continua a investigação, é confrontado por um morador local que \bestá despejando mais lixo no rio. Ele parece surpreso ao vê-lo e tenta justificar\n suas ações, dizendo que não há outro lugar para descartar o lixo e que ele não tem escolha.\n Você percebe a frustração e a falta de recursos enfrentados por essas pessoas, mas também entende que ações\n individuais têm um impacto coletivo significativo no meio ambiente.";
-	
-	public String txt07 = "--------------------------------------------\n"
-			+ "Com empatia, você explica os danos que o descarte irregular está causando ao rio, à vida selvagem e à saúde da comunidade.\n Você propõe soluções alternativas, como programas de reciclagem, limpeza coletiva e conscientização ambiental. \nJuntos, vocês começam a discutir maneiras de resolver o problema e trabalhar para um futuro mais limpo e sustentável para todos.";
+			+ "Um morador, que gosta muito de jogar dados, diz que se você o vence-lô eles irão parar.\n"
+			+ "Digite [1] para aceitar\n"
+			+ "Digite [2] para recusar";
 }
