@@ -26,8 +26,8 @@ public class Jogo {
 				*/
 				
 				// Inicio FASE - 2 
-				Fase_2 fase2 = new Fase_2(nick);
-				fase2.executarFase2();
+				//Fase_2 fase2 = new Fase_2(nick);
+				//fase2.executarFase2();
 				
 				// Fim FASE - 2
 				

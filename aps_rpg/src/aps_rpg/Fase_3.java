@@ -32,13 +32,6 @@ public class Fase_3 extends Personagem_Principal {
 	}
 	
 	
-	
-
-
-	public void Vencedor() {
-		
-	}
-
 	public boolean getEscolhaA() {
 		return escolhaA;
 	}
