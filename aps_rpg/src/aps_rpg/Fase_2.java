@@ -11,7 +11,7 @@ public class Fase_2 {
 	     int progresso = 0;
 	     int energia = 100; 
 	     Scanner scanner = new Scanner(System.in);
-
+	     
 	     while (progresso < 100) {
 	         System.out.println("\nProgresso: " + progresso + "%");
 	         System.out.println("Energia: " + energia);

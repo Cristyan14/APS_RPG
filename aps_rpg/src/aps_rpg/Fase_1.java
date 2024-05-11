@@ -93,7 +93,7 @@ public class Fase_1 extends Personagem_Principal{
 	        }
 	        }
 
-		public int valor;
+		public int valor = 3;
 
 		public boolean a = false;
 		public boolean b = false;
@@ -133,6 +133,7 @@ public class Fase_1 extends Personagem_Principal{
   		  	return tecla;
 		}
 		public void jogarDados(int valor) {
+
 				if(valor == 1) {
 					boolean vencer = false;		                	
 		        	while(vencer != true) {
@@ -181,7 +182,8 @@ public class Fase_1 extends Personagem_Principal{
 		        
 		
 		
-		public void escolha(int valor) {	
+		public void escolha() {	
+				int valor = 3;
 				Texto_Fase_01 textoFase01 = new Texto_Fase_01(nome); 
 				while(valor != 1 && valor != 2) {
 					System.out.println("Ao iniciar usa jornada "+ this.nome + ", você percebe algumas fontes de poluição.");

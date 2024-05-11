@@ -19,15 +19,15 @@ public class Jogo {
 				// Fim Introdução*/
 				
 				// Inicio FASE - 1
-		        Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
-				fase1.escolha(3); // Iniciar Fase 1 comentado
+		        //Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
+				//fase1.escolha(); // Iniciar Fase 1 comentado
 
 				// Fim FASE - 1
 				
 				
 				// Inicio FASE - 2 
-				Fase_2 fase2 = new Fase_2();
-				fase2.executarFase2();
+				//Fase_2 fase2 = new Fase_2();
+				//fase2.executarFase2();
 				
 				// Fim FASE - 2
 				

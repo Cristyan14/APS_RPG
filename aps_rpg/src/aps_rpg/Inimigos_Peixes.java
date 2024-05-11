@@ -73,8 +73,9 @@
 	        int vidaMaxInimigo = inimigo.vidaPeixe;
 	        Scanner scanner = new Scanner(System.in);
 	        Random rand = new Random();
-
+	        System.out.println("--------------------------------------------");
 	        System.out.println("Das profundesas... " + inimigo.nomePeixe + " emerge!!!!");
+	        System.out.println("--------------------------------------------");
 	        try {
 	            for (int i = 5; i > 0; i--) {
 	                Thread.sleep(1000); // Espera por 1 segundo
