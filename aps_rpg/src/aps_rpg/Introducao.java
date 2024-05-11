@@ -14,7 +14,7 @@ public class Introducao extends Personagem_Principal {
 	
 	public Introducao(Scanner escrever, String nick) {
 		super(nick);
-		this.escrever = escrever;
+		this.setEscrever(escrever);
 		textoIntroducao = new Texto_Introdução(nick);
 	}
 	
@@ -134,6 +134,14 @@ public class Introducao extends Personagem_Principal {
              System.out.println("--------------------------\n");
              tecla2 = tecla2a;
          }
+	}
+
+	public Scanner getEscrever() {
+		return escrever;
+	}
+
+	public void setEscrever(Scanner escrever) {
+		this.escrever = escrever;
 	}
 
 	

@@ -26,21 +26,21 @@ public class Jogo {
 				*/
 				
 				// Inicio FASE - 2 
-				//Fase_2 fase2 = new Fase_2();
-				//fase2.executarFase2();
+				Fase_2 fase2 = new Fase_2(nick);
+				fase2.executarFase2();
 				
 				// Fim FASE - 2
 				
 				
 				// Inicio FASE - 3
-				Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
-				 fase3.retornar(p); // Iniciar Fase 3 comentado
+				//Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
+				 //fase3.retornar(p); // Iniciar Fase 3 comentado
 				// Fim FASE - 3
 				
 				
 				// Inicio Fase - 4
-				Fase_4 fase4 = new Fase_4(nick);
-				fase4.retornar(p);// Iniciar Fase 4(batalha) comentado
+				//Fase_4 fase4 = new Fase_4(nick);
+				//fase4.retornar(p);// Iniciar Fase 4(batalha) comentado
 				// Fim Fase - 4
 				
 				

@@ -2,8 +2,7 @@ package aps_rpg;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 import aps_rpg_Textos.Texto_Fase_03;
 
@@ -191,11 +190,15 @@ public class Fase_3 extends Personagem_Principal {
 							System.out.println("--------------------------------------------");
 							pausaBreve();
 							verificar();
-							pausaBreve();
+							 pausaBreve();
 							 System.out.println(texto_fase_03.txt07);
+							 pausaBreve();
+							 verificar();
 							 pausaBreve();
 							 pausaBreve();
 							 System.out.println(texto_fase_03.txt08);
+							 pausaBreve();
+							 verificar();
 							 pausaBreve();
 							 Inimigos_Peixes.batalha(jogador);
 							 Inimigos_Peixes.batalha(jogador);
@@ -250,12 +253,16 @@ public class Fase_3 extends Personagem_Principal {
 							System.out.println("Utilizando sua espada de ferro, entregue por seus ancestrais, você consegue os derrotar!");
 							System.out.println("--------------------------------------------");
 							pausaBreve();
-							 verificar();
+							verificar();
 							 pausaBreve();
 							 System.out.println(texto_fase_03.txt07);
 							 pausaBreve();
+							 verificar();
+							 pausaBreve();
 							 pausaBreve();
 							 System.out.println(texto_fase_03.txt08);
+							 pausaBreve();
+							 verificar();
 							 pausaBreve();
 							 Inimigos_Peixes.batalha(jogador);
 							 Inimigos_Peixes.batalha(jogador);

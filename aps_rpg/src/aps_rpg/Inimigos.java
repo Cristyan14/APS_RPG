@@ -154,6 +154,7 @@ public class Inimigos{
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
+            scanner.close();
         }
 
     }
