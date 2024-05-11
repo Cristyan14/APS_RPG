@@ -16,14 +16,14 @@ public class Jogo {
 
 		        Personagem_Principal p = new Personagem_Principal(nick);
 		        /* Inicio Introdução
-				// Fim Introdução*/
+				// Fim Introdução
 				
 				// Inicio FASE - 1
 		        //Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
 				//fase1.escolha(); // Iniciar Fase 1 comentado
 
 				// Fim FASE - 1
-				
+				*/
 				
 				// Inicio FASE - 2 
 				//Fase_2 fase2 = new Fase_2();
