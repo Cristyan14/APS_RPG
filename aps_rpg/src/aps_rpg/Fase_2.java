@@ -3,12 +3,18 @@ package aps_rpg;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import aps_rpg_Textos.Texto_Fase_01;
+import aps_rpg_Textos.Texto_Fase_02;
+
 public class Fase_2 extends Personagem_Principal {
 	
 	public Fase_2(String nome) {
 		super(nome);
 		// TODO Auto-generated constructor stub
 	}
+	
+	Texto_Fase_02 texto_Fase_02 = new Texto_Fase_02(nome);
+	
 	public int verificar() {
 		int tecla = 1;
 		  	while(tecla != 0 ) {                   
@@ -31,19 +37,25 @@ public class Fase_2 extends Personagem_Principal {
 	    }
 	}
     public void executarFase2() {
-        System.out.println("=== Fase 2: Remoção de Obstruções ===");
-        System.out.println(nome +" está enfrentando a gangue dos Grandes Roedores, que estão bloqueando o rio com suas obstruções.");
-        System.out.println(nome +" precisa remover essas obstruções para restaurar o fluxo natural do rio.");
-        pausaBreve();;
+    	System.out.println(texto_Fase_02.txt01);
+    	pausaBreve();
         verificar();
         pausaBreve();
+        System.out.println(texto_Fase_02.txt02);
+        pausaBreve();
+        verificar();
+        pausaBreve();
+        System.out.println(texto_Fase_02.txt03);
+        pausaBreve();
+        verificar();
+        pausaBreve();        
 
         int progresso = 0;
         int energia = 100;
         Scanner scanner = new Scanner(System.in);
         
         while (progresso < 100) {
-            System.out.println("===================DESAFIO===================");
+            System.out.println("=============== D E S A F I O ===============");
             System.out.println("Progresso: " + progresso + "%");
             System.out.println("Energia: " + energia);
             System.out.println("Escolha sua ação:");
@@ -82,7 +94,7 @@ public class Fase_2 extends Personagem_Principal {
                     System.out.println("Você conseguiu se desviar dos detritos!");
                     System.out.println("--------------------------");
                     pausaBreve();
-                    System.out.println("==============================");
+                    System.out.println("=============== D E S A F I O ===============");
                     System.out.println("Progresso: " + progresso + "%");
                     System.out.println("Energia: " + energia);
                     System.out.println("\nEscolha sua ação:");
@@ -96,7 +108,7 @@ public class Fase_2 extends Personagem_Principal {
                     System.out.println("--------------------------");
                     pausaBreve();
                     energia -= 10; // Reduz a energia perdida
-                    System.out.println("==============================");
+                    System.out.println("=============== D E S A F I O ===============");
                     System.out.println("Progresso: " + progresso + "%");
                     System.out.println("Energia: " + energia);
                     System.out.println("\nEscolha sua ação:");
@@ -169,6 +181,12 @@ public class Fase_2 extends Personagem_Principal {
                 System.out.println("Parabéns! Você removeu todas as obstruções e restaurou o fluxo do rio!");
                 System.out.println("--------------------------");
                 pausaBreve();
+                System.out.println(texto_Fase_02.txt04);
+                pausaBreve();
+                verificar();
+                pausaBreve();
+                System.out.println(texto_Fase_02.txt05);
+                pausaBreve();
                 verificar();
                 pausaBreve();
                 break;
@@ -189,7 +207,6 @@ public class Fase_2 extends Personagem_Principal {
                 break;
             }
             
-            scanner.close();
         }
     }
 }
