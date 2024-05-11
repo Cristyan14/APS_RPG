@@ -135,7 +135,7 @@ public class Fase_1 extends Personagem_Principal{
 		public void jogarDados(int valor) {
 				if(valor == 1) {
 					boolean vencer = false;		                	
-		        	while(vencer != false) {
+		        	while(vencer != true) {
 		        		Random r = new Random();
 		            	int valorNPC = r.nextInt(12) + 1;
 		            	int valorJogador = r.nextInt(12) + 1;
@@ -187,7 +187,7 @@ public class Fase_1 extends Personagem_Principal{
 					System.out.println("Ao iniciar usa jornada "+ this.nome + ", você percebe algumas fontes de poluição.");
 					pausaBreve(2000);
 					System.out.println("Digite [1] para investigar os Esgotos Industriais.\nDigite [2] para investigar o Descarte irregular de lixo.");
-					valor = escrever.nextInt();}
+					valor = escrever.nextInt();
 				if(valor == 1) {
 						this.a = true;		        
 				        System.out.println(textoFase01.txt01);
@@ -205,7 +205,7 @@ public class Fase_1 extends Personagem_Principal{
 			               
 			            
 			        }/* Até Aqui Referente a primeira escolha.*/
-					}else if(valor == 2) {
+				}else if(valor == 2) {
 						this.b = true;
 			            System.out.println(textoFase01.txt03);
 		                verificar();
@@ -218,10 +218,15 @@ public class Fase_1 extends Personagem_Principal{
 		                pausaBreve(4000);
 		                System.out.println(textoFase01.txt06);
 		                int usuarioOP = escrever.nextInt();
-		                jogarDados(usuarioOP);
-		                pausaBreve(4000);
+		                if(usuarioOP == 1) {
+		                	jogarDados(usuarioOP);
+		                }else {
+		                	jogarDados(usuarioOP);
+		                }
+		             
+		                System.out.println(usuarioOP);
 		          
-					}}}
+					}}}}
 			
 			
 			
