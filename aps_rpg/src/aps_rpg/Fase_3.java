@@ -99,7 +99,7 @@ public class Fase_3 extends Personagem_Principal {
 						System.out.println("...");
 						pausaBreve();
 						System.out.println("--------------------------------------------");
-						System.out.println("Você venceu!!! O Grande Cardume de peixes foi vencido pela sua vara de pesca lendária, que você havia ganhado de seu antigo Sensei\n O Grande Dr. Ecológico!");
+						System.out.println("Você venceu!!! O Grande Cardume de peixes foi vencido pela sua vara de pesca lendária, que você havia ganhado de seu antigo Sensei\n O Grande Mestre Oogway do Tiête!");
 						System.out.println("--------------------------------------------");
 						pausaBreve();
 						verificar();

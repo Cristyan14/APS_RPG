@@ -17,7 +17,13 @@ public class Introducao extends Personagem_Principal {
 		this.setEscrever(escrever);
 		textoIntroducao = new Texto_Introdução(nick);
 	}
-	
+	public void pausaBreve() {
+	    try {
+	        Thread.sleep(2000); // Pausa por 2 segundo
+	    } catch (InterruptedException e) {
+	        e.printStackTrace();
+	    }
+	}
 	public void iniciarIntroducao() {
 		int tecla1a = 1;
 		
@@ -25,6 +31,7 @@ public class Introducao extends Personagem_Principal {
 			System.out.println("--------------------------");
 	        System.out.println("Digite 0 para continuar...");
 	        System.out.println("--------------------------");
+	        pausaBreve();
 	        tecla1a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
 		}
 		int tecla1 = tecla1a;
@@ -37,7 +44,7 @@ public class Introducao extends Personagem_Principal {
             long delay = 2000L; // 5 segundos em milissegundos
 			timer.schedule(task1, delay);
         } else {
-            System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
+            
         }
         try {
             Thread.sleep(delayp);
@@ -51,6 +58,7 @@ public class Introducao extends Personagem_Principal {
 			System.out.println("--------------------------");
 	        System.out.println("Digite 0 para continuar...");
 	        System.out.println("--------------------------");
+	        pausaBreve();
 	        tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
 		}
 		int tecla2 = tecla2a;
@@ -65,7 +73,9 @@ public class Introducao extends Personagem_Principal {
 		    timer.schedule(task2, delay);
 
 		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
+			System.out.println("--------------------------");
+			System.out.println("Digite 0 para continuar...");
+		    System.out.println("--------------------------");
 		}
 		
 		
@@ -79,6 +89,7 @@ public class Introducao extends Personagem_Principal {
 			System.out.println("--------------------------");
 	        System.out.println("Digite 0 para continuar...");
 	        System.out.println("--------------------------");
+	        pausaBreve();
 	        tecla3a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
 		}
 		int tecla3 = tecla3a;
@@ -94,7 +105,10 @@ public class Introducao extends Personagem_Principal {
 
 
 		} else {
-		    System.out.println("Você pressionou uma tecla diferente de 0. O programa será encerrado.");
+			System.out.println("--------------------------");
+			System.out.println("Digite 0 para continuar...");
+		    System.out.println("--------------------------");
+		    pausaBreve();
 		}
 		
 		
@@ -129,9 +143,10 @@ public class Introducao extends Personagem_Principal {
 		int tecla2 = 1;
 	    while(tecla2 != 0 ) {
              System.out.println("--------------------------");
-             System.out.println("Digite 0 para continuar...");
-             int tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+             System.out.println("Digite 0 para continuar...");        
              System.out.println("--------------------------\n");
+             pausaBreve();
+             int tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
              tecla2 = tecla2a;
          }
 	}
