@@ -1,5 +1,6 @@
 package aps_rpg;
 
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -28,10 +29,9 @@ public class Fase_5 extends Personagem_Principal{
 	public int verificar() {
 		int tecla = 1;
 		  	while(tecla != 0 ) {                   
-             System.out.println("--------------------------");
-             System.out.println("Digite 0 para continuar...");          
-             System.out.println("--------------------------");
-             int teclaa = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+	             System.out.print("Digite 0 para continuar: ");          
+	             int teclaa = Jogo.escrever.nextInt();
+	             System.out.println("--------------------------");// Aguarda a entrada do usuário
              if(teclaa == 0) {
           	   tecla = teclaa;
              }                   
@@ -46,19 +46,24 @@ public class Fase_5 extends Personagem_Principal{
         int perguntas = 5;
         String[] respostasCorretas = {"c", "b", "a", "b", "c"};
         int contadorPerguntas = 0;
-
+        
         while (!vencer) {
             if (pontuacao >= 3) {
             	System.out.println("--------------------------");
                 System.out.println("Você venceu!");
-                System.out.println("--------------------------");
+     
                 pausaBreve();
                 verificar();
                 vencer = true;
-            } else {
-            	System.out.println("--------------------------");
+            } else if (contadorPerguntas == perguntas) {
+                System.out.println("--------------------------");
+                System.out.println("Você não conseguiu acertar as perguntas o suficiente. Você perdeu!");
+                pausaBreve();             
+                break; 
+            }else {
                 System.out.println(obterTextoPergunta(contadorPerguntas));
-                String op = escrever.nextLine().toLowerCase();
+                System.out.print("Resposta: ");
+                String op = escrever.next().toLowerCase();
                 if(!op.equalsIgnoreCase("a") && !op.equalsIgnoreCase("b") && !op.equalsIgnoreCase("c")) {
                 	System.out.println("--------------------------");
                 	System.out.println("Opção inválida. Por favor, escolha entre A, B ou C.");
@@ -67,13 +72,11 @@ public class Fase_5 extends Personagem_Principal{
   	                if (op.equalsIgnoreCase(respostasCorretas[contadorPerguntas])) {
   	                	System.out.println("--------------------------");
   	                    System.out.println("Você acertou!");
-  	                    System.out.println("--------------------------");
   	                    pausaBreve();
   	                    pontuacao += 1;
   	                } else {
   	                	System.out.println("--------------------------");
   	                    System.out.println("Resposta incorreta!");
-  	                  System.out.println("--------------------------");
   	                    pausaBreve();                  
   	                }
   	                contadorPerguntas++;
@@ -97,8 +100,7 @@ public class Fase_5 extends Personagem_Principal{
                 return texto_fase_05.txt08;
             default:
             	System.out.println("--------------------------");
-                return "Fim do jogo!\n--------------------------";
-                
+                return "Fim do jogo!\n--------------------------";              
         }
     }
 	
@@ -142,18 +144,42 @@ public class Fase_5 extends Personagem_Principal{
 		EscolhaB = escolhaB;
 	}
 	
+	
+
+		
 	public void IniciarFase5() {
+		boolean correto = false;
+		
 		System.out.println(texto_fase_05.txt01);
 		pausaBreve();
 		verificar();
 		pausaBreve();
 		System.out.println(texto_fase_05.txt02);
 		pausaBreve();
-		System.out.println(texto_fase_05.txt03);
-		int opcao = escrever.nextInt();
-		escrever.nextLine();
-		pausaBreve();
-		Escolha(opcao);
+		while(!correto) {
+			try {
+				System.out.println(texto_fase_05.txt03);
+		        System.out.print("Digite: ");
+		        int valor = escrever.nextInt();
+		        pausaBreve();
+		        
+		        
+		        if (valor == 1 || valor == 2) {
+		        	Escolha(valor);
+		            correto = true;
+		        } else {
+		            System.out.println("--------------------------");
+		            System.out.println("Opção inválida!");
+		            pausaBreve();
+		        }
+		    } catch (InputMismatchException e) {
+		        System.out.println("--------------------------");
+		        System.out.println("Entrada inválida! Por favor, digite um número inteiro.");
+	
+		        pausaBreve();
+		        escrever.next(); // Limpa o buffer de entrada
+		    }}
+		
 		pausaBreve();
 		System.out.println(texto_fase_05.txt09);
 		pausaBreve();
@@ -167,7 +193,6 @@ public class Fase_5 extends Personagem_Principal{
 		pausaBreve();
 		System.out.println(texto_fase_05.txt14);
 		pausaBreve();
-		System.out.println("--------------------------");
 		System.out.println("FIM");
 		System.out.println("--------------------------");
 

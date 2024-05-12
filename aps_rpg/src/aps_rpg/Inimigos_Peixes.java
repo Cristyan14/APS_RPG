@@ -90,6 +90,8 @@
 	            System.out.println(jogador.nome + "\nHP: " + jogador.getVida() + "/" + jogador.getMaxVida());
 	            System.out.println("\nO que irá fazer?\n");
 	            System.out.println("[1] Bater com a vara de pesca\n[2] Usar poção de cura\n[3] Nadar pra longe\n");
+	            System.out.print("Digite: ");
+	            System.out.println("--------------------------------------------");
 	            int tecla = scanner.nextInt();
 
 	            if (tecla == 1) {
@@ -155,8 +157,9 @@
 	            } catch (InterruptedException e) {
 	                Thread.currentThread().interrupt();
 	            }
-	            scanner.close();
+	            
 	        }
 
 	    }
+	    
 	}

@@ -11,33 +11,34 @@ public class Jogo {
 
 		
 				System.out.println("Bem Vindo caro jogador, seja bem-vindo(a) nesta jornada!");
-		        System.out.println("Digite seu nickname: ");
+		        System.out.print("Digite seu nickname: ");
 		        String nick = escrever.next();
 
 		        Personagem_Principal p = new Personagem_Principal(nick);
 		         //Inicio Introdução
 		        
-		        Introducao introducao = new Introducao(escrever, nick);
-		        introducao.iniciarIntroducao();
+		        //Introducao introducao = new Introducao(escrever, nick);
+		         //introducao.iniciarIntroducao();
 				// Fim Introdução
 				
 				// Inicio FASE - 1
-		        Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
-				fase1.escolha(); // Iniciar Fase 1 comentado
+		         //Fase_1 fase1 = new Fase_1(nick); // Iniciar Fase 1 comentado
+		        //fase1.escolha(); 
+		        // Iniciar Fase 1 comentado
 
 				// Fim FASE - 1
 				
 				
 				// Inicio FASE - 2 
-				Fase_2 fase2 = new Fase_2(nick);
-				fase2.executarFase2();
+				//Fase_2 fase2 = new Fase_2(nick);
+				//fase2.executarFase2();
 				
 				// Fim FASE - 2
 				
 				
 				// Inicio FASE - 3
-				Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
-				fase3.retornar(p); // Iniciar Fase 3 comentado
+				//Fase_3 fase3 = new Fase_3(nick); // Iniciar Fase 3 comentado
+				//fase3.retornar(p); // Iniciar Fase 3 comentado
 				// Fim FASE - 3
 				
 				
@@ -48,8 +49,8 @@ public class Jogo {
 				
 				
 				// Inicio Fase - 5
-				Fase_5 fase5 = new  Fase_5(nick);
-				fase5.IniciarFase5();
+				//Fase_5 fase5 = new  Fase_5(nick);
+				//fase5.IniciarFase5();
 				
 				// Fim Fase - 5
 		

@@ -24,103 +24,30 @@ public class Introducao extends Personagem_Principal {
 	        e.printStackTrace();
 	    }
 	}
+	public int verificar() {
+		int tecla = 1;
+		  	while(tecla != 0 ) {                   
+             System.out.println("Digite 0 para continuar...");          
+             System.out.print("--------------------------");
+             int teclaa = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+             if(teclaa == 0) {
+          	   tecla = teclaa;
+             }                   
+              
+           }
+		  	return tecla;
+	}
 	public void iniciarIntroducao() {
-		int tecla1a = 1;
-		
-		while(tecla1a != 0) {
-			System.out.println("--------------------------");
-	        System.out.println("Digite 0 para continuar...");
-	        System.out.println("--------------------------");
-	        pausaBreve();
-	        tecla1a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
-		}
-		int tecla1 = tecla1a;
-        if (tecla1 == 0) {
-            TimerTask task1 = new TimerTask() {
-                public void run() {
-                    iniciarTexto01();
-                }
-            };
-            long delay = 2000L; // 5 segundos em milissegundos
-			timer.schedule(task1, delay);
-        } else {
-            
-        }
-        try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        
-        
-        int tecla2a = 1;
-		while(tecla2a != 0) {
-			System.out.println("--------------------------");
-	        System.out.println("Digite 0 para continuar...");
-	        System.out.println("--------------------------");
-	        pausaBreve();
-	        tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
-		}
-		int tecla2 = tecla2a;
-		if (tecla2 == 0) {
-		    TimerTask task2 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto02();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task2, delay);
-
-		} else {
-			System.out.println("--------------------------");
-			System.out.println("Digite 0 para continuar...");
-		    System.out.println("--------------------------");
-		}
-		
-		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-		int tecla3a = 1;
-		while(tecla3a != 0) {
-			System.out.println("--------------------------");
-	        System.out.println("Digite 0 para continuar...");
-	        System.out.println("--------------------------");
-	        pausaBreve();
-	        tecla3a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
-		}
-		int tecla3 = tecla3a;
-		if (tecla3 == 0) {
-		    TimerTask task3 = new TimerTask() {
-		        public void run() {
-		        	iniciarTexto03();
-		        }
-		    };
-		    long delay = 2000L; // 5 segundos em milissegundos
-
-		    timer.schedule(task3, delay);
-
-
-		} else {
-			System.out.println("--------------------------");
-			System.out.println("Digite 0 para continuar...");
-		    System.out.println("--------------------------");
-		    pausaBreve();
-		}
-		
-		
-		try {
-            Thread.sleep(delayp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-		
-		finalizar();
-		
-    }
+		iniciarTexto01();
+		verificar();
+		pausaBreve();
+		iniciarTexto02();
+		verificar();
+		pausaBreve();
+		iniciarTexto03();
+		verificar();
+		pausaBreve();
+	}
 	
 	public void iniciarTexto01() {
 		System.out.println(textoIntroducao.getTxt01());
@@ -142,9 +69,7 @@ public class Introducao extends Personagem_Principal {
 	public void finalizar() {
 		int tecla2 = 1;
 	    while(tecla2 != 0 ) {
-             System.out.println("--------------------------");
-             System.out.println("Digite 0 para continuar...");        
-             System.out.println("--------------------------\n");
+             System.out.println("--------------------------");             System.out.println("--------------------------\n");
              pausaBreve();
              int tecla2a = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
              tecla2 = tecla2a;

@@ -18,10 +18,10 @@ public class Fase_2 extends Personagem_Principal {
 	public int verificar() {
 		int tecla = 1;
 		  	while(tecla != 0 ) {                   
-             System.out.println("--------------------------");
-             System.out.println("Digite 0 para continuar...");          
-             System.out.println("--------------------------");
-             int teclaa = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		  		System.out.println("--------------------------");
+	             System.out.print("Digite 0 para continuar: ");          
+	             int teclaa = Jogo.escrever.nextInt();
+	             System.out.println("--------------------------"); // Aguarda a entrada do usuário
              if(teclaa == 0) {
           	   tecla = teclaa;
              }                   
@@ -65,21 +65,21 @@ public class Fase_2 extends Personagem_Principal {
 
             // Verifica se há detritos flutuantes
             if (Math.random() < 0.6) {
-            	System.out.println("--------------------------");
+            	System.out.println("\n--------------------------");
                 System.out.println("Cuidado! Detritos flutuantes se aproximando!");
-                System.out.println("--------------------------");
                 pausaBreve();
                 System.out.println("--------------------------");
                 System.out.println("Desvie deles para não perder energia.");
-                System.out.println("--------------------------");
                 pausaBreve();
                 System.out.println("--------------------------");
                 System.out.println("[1] Tentar desviar");
                 System.out.println("--------------------------");
+                
 
                 // Tenta desviar dos detritos
                 int escolhaDesvio = 0;
                 try {
+                	System.out.print("Digite: ");
                     escolhaDesvio = scanner.nextInt();
                 } catch (InputMismatchException e) {
                 	System.out.println("--------------------------");

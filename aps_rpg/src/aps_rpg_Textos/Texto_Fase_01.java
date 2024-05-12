@@ -8,8 +8,8 @@ public class Texto_Fase_01 extends Personagem_Principal {
 		nome = this.nome;
 	}
 
-	public String txt01 = "----------------------- Fase 01 -----------------------"
-			+ "\n Você "+ nome +", uma escada em uma fabrica proxíma a margem do rio em uma floresta tenebrosa e decide descer para investiga-la.\n"
+	public String txt01 = "--------------------------------------------\n"
+			+ "Você "+ nome +", uma escada em uma fabrica proxíma a margem do rio em uma floresta tenebrosa e decide descer para investiga-la.\n"
 			+ "Enquanto voce desce pelas escadas enferrujadas\n"
 			+ "até as entranhas escuras da fabrica, você encontra evidências \n"
 			+ "perturbadoras de negligência ambiental acabando com a sustentabilidade da região. Produtos químicos tóxicos poluem as águas, \n"
@@ -17,7 +17,7 @@ public class Texto_Fase_01 extends Personagem_Principal {
 	
 	public String txt02 = "--------------------------------------------"
 			+ "\n Você "+ nome+ " encontra diversas latas de ervilhas e vê que em suas embalagens aponta para MegaCorporation,\n"
-			+ " uma grande empresa quem vem gerando grande poluição ao meio ambiente, destruindo o ecossistema.\nA fabríca que você entrou na verdade \n"
+			+ "uma grande empresa quem vem gerando grande poluição ao meio ambiente, destruindo o ecossistema.\nA fabríca que você entrou na verdade,\n"
 			+ "é uma fabríca desativada da MegaCorporation, e percebe "
 			+ "não é mais feita reciclagem do lixo. ";
 	
@@ -28,17 +28,19 @@ public class Texto_Fase_01 extends Personagem_Principal {
 			+ "OBS:(Não precisa ter acentuação, somente caracteres, sem números.)";
 	
 	
-	public String txt03 = "--------------------------------------------\n" + nome 
-			+ "Como o herói da nossa história, decide investigar o descarte\n irregular de lixo diretamente no rio, uma prática que tem causado danos\n significativos ao meio ambiente e à comunidade local.";
+	public String txt03 = "--------------------------------------------\n" 
+			+ nome + ", como o herói(na) da nossa história, decide investigar o descarte\nirregular de lixo diretamente no rio, uma prática que tem causado danos\nsignificativos ao meio ambiente e à comunidade local.";
 	
 	public String txt04 = "--------------------------------------------\n"
-			+ "À medida que você se aproxima do rio, o cheiro pútrido e a visão desoladora\b de lixo flutuando na água deixam claro que o problema é sério. Entre os\n detritos, você avista plásticos, garrafas quebradas, sacolas e até mesmo alguns produtos químicos suspeitos.";
+			+ "À medida que você se aproxima do rio, o cheiro pútrido e a visão desoladora\nde lixo flutuando na água deixam claro que o problema é sério.\nEntre os detritos, você avista plásticos, garrafas quebradas, sacolas e até mesmo alguns produtos químicos suspeitos.";
 
 	public String txt05 = "--------------------------------------------\n"
 			+ "Você então, percebe que um grupo de moradores estão jogando lixo naquele momento\n"
 			+ "E então decidi os confrontar!";
 	public String txt06 = "--------------------------------------------\n"
 			+ "Um morador, que gosta muito de jogar dados, diz que se você o vence-lô eles irão parar.\n"
-			+ "Digite [1] para aceitar\n"
-			+ "Digite [2] para recusar";
+			+ "Digite [1] para aceitar.\n"
+			+ "Digite [2] para recusar.\n"
+			+ "(Obs: São dados, logo o valor máximo é 12!)\n"
+			+ "--------------------------------------------";
 }

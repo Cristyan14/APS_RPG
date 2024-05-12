@@ -1,5 +1,6 @@
 package aps_rpg;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Timer;
@@ -53,7 +54,7 @@ public class Fase_1 extends Personagem_Principal{
 		        for (int tentavivas = 0; tentavivas < MAX_TENTATIVAS; tentavivas++) {
 		        	System.out.println("----------------------");
 		            System.out.printf("Rodada %d. Até agora adivinhada: %s. Qual a sua próxima letra?%n", tentavivas, palavraAdivinhada);
-	
+		            System.out.print("Digite: ");
 		            char letraTentada = escrever.next().toUpperCase().charAt(0);
 		            if (letrasUsadas.indexOf(letraTentada) >= 0) {
 		                System.out.printf("Você já tentou a letra %c.%n", letraTentada);
@@ -70,7 +71,6 @@ public class Fase_1 extends Personagem_Principal{
 		                        System.out.printf("Muito bom! %s existe na palavra. Ainda tem letras escondidas%n", letraTentada);
 		                    } else {
 		                        System.out.printf("Parabéns! A palavra adivinhada era '%s'%n", palavraAdivinhada);
-		                        System.out.println("--------------------");
 		                        pausaBreve(4000);
 		                        vencer_forca = true;
 		                        break;
@@ -87,7 +87,7 @@ public class Fase_1 extends Personagem_Principal{
 	            System.out.println("Foram 10 tentativas... Você perdeu! Não desista!");
 	            pausaBreve(4000);
 	            System.out.println("Você terá mais uma chance, o meio ambiente precisa de você!!!");
-	         
+	            pausaBreve(4000);
 	          
 	        }
 	        }
@@ -121,10 +121,10 @@ public class Fase_1 extends Personagem_Principal{
 		public int verificar() {
 			int tecla = 1;
   		  	while(tecla != 0 ) {                   
-                 System.out.println("--------------------------");
-                 System.out.println("Digite 0 para continuar...");          
-                 System.out.println("--------------------------");
-                 int teclaa = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+  		  	System.out.println("--------------------------");
+            System.out.print("Digite 0 para continuar: ");          
+            int teclaa = Jogo.escrever.nextInt();
+            System.out.println("--------------------------"); // Aguarda a entrada do usuário
                  if(teclaa == 0) {
               	   tecla = teclaa;
                  }                   
@@ -138,34 +138,38 @@ public class Fase_1 extends Personagem_Principal{
 					boolean vencer = false;		                	
 		        	while(vencer != true) {
 		        		Random r = new Random();
-		            	int valorNPC = r.nextInt(12) + 1;
-		            	int valorJogador = r.nextInt(12) + 1;
-		        		if(valorJogador > valorNPC) {
-		        			System.out.println("Seu valor no dado foi de: " + valorJogador);
+		            	int valorNPC = r.nextInt(6) + 1;
+		            	int valorJogador = r.nextInt(6) + 1;
+		            	int valorNPC2 = r.nextInt(6) + 1;
+		            	int valorJogador2 = r.nextInt(6) + 1;
+		            	int somaJogador = valorJogador + valorJogador2;
+		            	int somaNPC = valorNPC + valorNPC2;
+		        		if(somaJogador > somaNPC) {
+		        			System.out.println("Seus dados foram de: " + valorJogador + " e " + valorJogador2);
 		        			pausaBreve(2000);
 		        			System.out.println("...");
 		        			System.out.println("...");
-		        			System.out.println("O valor do morador foi de: " + valorNPC);
+		        			System.out.println("O dados do Morador foram de: " + valorNPC + " e " + valorNPC2);
 		        			pausaBreve(2000);
 		        			System.out.println("Meus Parabéns!! Você venceu!!!");
 		        			vencer = true;
 		        			verificar();
 		        			break;
-		        		}else if(valorNPC > valorJogador) {
-		        			System.out.println("Seu valor no dado foi de: " + valorJogador);
+		        		}else if(valorNPC > somaJogador) {
+		        			System.out.println("Seus dados foram de: " + valorJogador + " e " + valorJogador2);
 		        			pausaBreve(2000);
 		        			System.out.println("...");
 		        			System.out.println("...");
-		        			System.out.println("O valor do morador foi de: " + valorNPC);
+		        			System.out.println("O dados do Morador foram de: " + valorNPC + " e " + valorNPC2);
 		        			pausaBreve(2000);
 		        			System.out.println("Você perdeu!! Tente denovo não desista!!!");
 		        			verificar();
 		        		}else {
-		        			System.out.println("Seu valor no dado foi de: " + valorJogador);
+		        			System.out.println("Seus dados foram de: " + valorJogador + " e " + valorJogador2);
 		        			pausaBreve(2000);
 		        			System.out.println("...");
 		        			System.out.println("...");
-		        			System.out.println("O valor do morador foi de: " + valorNPC);
+		        			System.out.println("O dados do Morador foram de: " + valorNPC + " e " + valorNPC2);
 		        			pausaBreve(2000);
 		        			System.out.println("Quaaassee!!!! Tenta denovo!!!!!!");
 		        			verificar();
@@ -173,7 +177,6 @@ public class Fase_1 extends Personagem_Principal{
 		        else {
 				       System.out.println("--------------------------");
 				       System.out.println("Xiiiiiiiiii! Você correu!!!");
-				       System.out.println("--------------------------");
 				       pausaBreve(4000);
 				       verificar();
 				       pausaBreve(4000);				    
@@ -183,13 +186,39 @@ public class Fase_1 extends Personagem_Principal{
 		
 		
 		public void escolha() {	
+				boolean correto = false;
 				int valor = 3;
 				Texto_Fase_01 textoFase01 = new Texto_Fase_01(nome); 
 				while(valor != 1 && valor != 2) {
+					System.out.println("----------------------- Fase 01 -----------------------");
 					System.out.println("Ao iniciar usa jornada "+ this.nome + ", você percebe algumas fontes de poluição.");
-					pausaBreve(2000);
-					System.out.println("Digite [1] para investigar os Esgotos Industriais.\nDigite [2] para investigar o Descarte irregular de lixo.");
-					valor = escrever.nextInt();
+					pausaBreve(4000);
+					while(!correto) {
+					try {
+				        System.out.println("Digite [1] para investigar os Esgotos Industriais.");
+				        System.out.println("Digite [2] para investigar o Descarte irregular de lixo.");
+				        System.out.println("----------------------------------------------");
+				        System.out.print("Digite: ");
+				        pausaBreve(2000);
+				        
+				        valor = escrever.nextInt();
+				        
+				        if (valor == 1 || valor == 2) {
+				            correto = true;
+				        } else {
+				            System.out.println("--------------------------");
+				            System.out.println("Opção inválida!");
+				            System.out.println("--------------------------");
+				            pausaBreve(2000);
+				        }
+				    } catch (InputMismatchException e) {
+				        System.out.println("--------------------------");
+				        System.out.println("Entrada inválida! Por favor, digite um número inteiro.");
+				        System.out.println("--------------------------");
+				        pausaBreve(2000);
+				        escrever.next(); // Limpa o buffer de entrada
+				    }}
+					
 				if(valor == 1) {
 						this.a = true;		        
 				        System.out.println(textoFase01.txt01);
@@ -219,14 +248,25 @@ public class Fase_1 extends Personagem_Principal{
 		                verificar();
 		                pausaBreve(4000);
 		                System.out.println(textoFase01.txt06);
-		                int usuarioOP = escrever.nextInt();
-		                if(usuarioOP == 1) {
-		                	jogarDados(usuarioOP);
-		                }else {
-		                	jogarDados(usuarioOP);
+		                boolean valorCorreto = false;
+		                while(!valorCorreto) {
+		                	System.out.println(textoFase01.txt06);
+		                	 int usuarioOP = escrever.nextInt();
+				                if(usuarioOP == 1) {
+				                	jogarDados(usuarioOP);
+				                	break;
+				                }else if(usuarioOP == 2) {
+				                	jogarDados(usuarioOP);
+				                	break;
+				                }else {
+				                	System.out.println("--------------------------");
+				                	System.out.println("Opção inválida!");
+				                	pausaBreve(4000);
+				                }
 		                }
+		               
 		             
-		                System.out.println(usuarioOP);
+		   
 		          
 					}}}}
 			

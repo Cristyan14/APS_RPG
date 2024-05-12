@@ -13,8 +13,7 @@ public class Texto_Fase_03  extends Personagem_Principal{
 			+ "\nApós uma longa jornada, você "+nome+ " irá começar a restauração da vida aquática no rio.\nAo começar sua navegação você"
 			+ "se depara com um Cardume Voraz de peixes \nmutantes que foram jogados pela MegaCorporation como seus animais de testes.";
 	
-	public String txt02 = "--------------------------------------------"
-			+ "\nHá duas possibilides para você enfrentar esse cardume\n"
+	public String txt02 ="Há duas possibilides para você enfrentar esse cardume\n"
 			+ "Digite [1] para tentar pesca-los com sua vara de pesca lendária\n"
 			+ "Digite [2] para Luta corpo a corpo"
 			+ "\n--------------------------------------------";
@@ -29,8 +28,8 @@ public class Texto_Fase_03  extends Personagem_Principal{
 			+ "\nLá, você se depara com uma grande quantidade de peixes te esperando. ";
 	
 	public String txt06 = "--------------------------------------------"
-			+ "\nDigite [1] para golpear o cardume usando suas mãos\n"
-			+ "Digite [2] para golpear o cardume usando uma espada de garrafa pet\n"
+			+ "\nDigite [1] para golpear o cardume usando suas mãos.\n"
+			+ "Digite [2] para golpear o cardume usando uma espada de ferro.\n"
 			+ "--------------------------------------------";
 	
 	public String txt07 = "--------------------------------------------"
@@ -38,8 +37,7 @@ public class Texto_Fase_03  extends Personagem_Principal{
 			+ "E eles não parecem muito contentes...";
 	
 	public String txt08 = "--------------------------------------------"
-			+ "\n"+nome+" vê duas sombras do fundo de rio se aproximando...\n"
-					+ "--------------------------------------------";
+			+ "\n"+nome+" vê duas sombras do fundo de rio se aproximando...\n";
 	
 	public String txt09 = "--------------------------------------------"
 			+ "\nUfa! Essa foi por pouco... "+nome+" derrota os peixes tóxicos restantes, livrando a vida aquática do rio das mais\n"

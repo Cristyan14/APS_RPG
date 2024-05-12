@@ -20,10 +20,10 @@ public class Fase_4 extends Personagem_Principal{
 	public int verificar() {
 		int tecla = 1;
 		  	while(tecla != 0 ) {                   
-             System.out.println("--------------------------");
-             System.out.println("Digite 0 para continuar...");          
-             System.out.println("--------------------------");
-             int teclaa = Jogo.escrever.nextInt(); // Aguarda a entrada do usuário
+		  		System.out.println("--------------------------");
+	             System.out.print("Digite 0 para continuar: ");          
+	             int teclaa = Jogo.escrever.nextInt();
+	             System.out.println("--------------------------");// Aguarda a entrada do usuário
              if(teclaa == 0) {
           	   tecla = teclaa;
              }                   
@@ -44,7 +44,6 @@ public class Fase_4 extends Personagem_Principal{
 		pausaBreve();
 		verificar();
 		pausaBreve();;
-		System.out.println("--------------------------");
 		System.out.println(texto_fase_04.pausaDramatica);
 		pausaBreve();
 		System.out.println(texto_fase_04.pausaDramatica);

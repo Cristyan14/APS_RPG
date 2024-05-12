@@ -10,54 +10,47 @@ public class Texto_Fase_05 extends Personagem_Principal {
 	}
 
 		public String txt01 = "----------------------- Fase 05 -----------------------\n"
-		+ nome + " , você recebeu um convite especial para a grande celebração da recuperação do Rio Tietê.\n"
+		+ nome + ", você recebeu um convite especial para a grande celebração da recuperação do Rio Tietê.\n"
 				+ " Após uma longa jornada, lutando com varios inimigos, realizando varios puzzles,\n"
-				+ "Você enfim consegue acabar com a Mafía do Meio Ambiente e concientizar a população\n"
-				+ "--------------------------\n";
-		public String txt02 = "--------------------------\n"
-				+ "Quando você esta andando na rua, um fã te desafia saber se você realmente sabe sobre o meio ambiente.\n"
-				+ "--------------------------\n";
+				+ "Você enfim consegue acabar com a Mafía do Meio Ambiente e concientizar a população.\n"
+				+ "--------------------------";
+		public String txt02 ="Quando você esta andando na rua, um fã te desafia saber se você realmente sabe sobre o meio ambiente.";
 		public String txt03 = "--------------------------\n"
 				+ "Digite [1] para aceitar o desafio.\n"
-				+ "Digite [2] para recusar o desafio\n"
-				+ "--------------------------\n";
+				+ "Digite [2] para recusar o desafio.\n"
+				+ "--------------------------";
 		
 		// Escolha 1
-		public String txt04 = "--------------------------\n"
+		public String txt04 ="--------------------------\n"
 				+ " Pergunta 1: Qual é uma maneira fácil de reduzir o uso de plástico no dia a dia?\n"
 				+ " A) Usar sacolas plásticas descartáveis.\n"
 				+ " B) Optar por garrafas de água descartáveis.\n"
-				+ " C) Utilizar sacolas reutilizáveis.\n"
-				+ "--------------------------\n";
+				+ " C) Utilizar sacolas reutilizáveis.\n";
 		
 		public String txt05 = "--------------------------\n"
 				+ " Pergunta 2: O que é reciclagem e por que é importante?\n"
 				+ " A) Jogar lixo na natureza para que se decomponha naturalmente.\n"
 				+ " B) Reutilizar materiais para criar novos produtos e reduzir a quantidade de lixo enviado para aterros sanitários.\n"
-				+ " C) Queimar lixo para gerar energia\n"
-				+ "--------------------------\n";
+				+ " C) Queimar lixo para gerar energia\n";
 		public String txt06 = "--------------------------\n"
 				+ " Pergunta 3: Quais são algumas das principais fontes de poluição do Rio Tietê?\n"
-				+ " A) Descarte inadequado de resíduos industriais e domésticos./n"
+				+ " A) Descarte inadequado de resíduos industriais e domésticos.\n"
 				+ " B) Uso exclusivo de embarcações movidas a energia solar.\n"
-				+ " C) Reflorestamento das margens do rio.\n"
-				+ "--------------------------\n";
+				+ " C) Reflorestamento das margens do rio.\n";
 		public String txt07 = "--------------------------\n"
 				+ " Pergunta 4: Qual é o impacto da poluição do Rio Tietê na vida aquática?\n"
 				+ " A) Melhora na qualidade da água.\n"
 				+ " B) Diminuição da diversidade de espécies.\n"
-				+ " C) Aumento na população de peixes.\n"
-				+ "--------------------------\n";
+				+ " C) Aumento na população de peixes.\n";
 		public String txt08 = "--------------------------\n"
 				+ " Pergunta 5: Como a poluição do Rio Tietê afeta as comunidades ribeirinhas?\n"
-				+ " A) Melhora na saúde das comunidades./n"
+				+ " A) Melhora na saúde das comunidades.\n"
 				+ " B) Aumento na oferta de alimentos provenientes do rio.\n"
-				+ " C) Prejuízos à saúde e ao bem-estar devido à contaminação da água.\n"
-				+ "--------------------------\n";
+				+ " C) Prejuízos à saúde e ao bem-estar devido à contaminação da água.\n";
 		
 		
 		public String txt09 = "--------------------------"
-				+ nome +" Aventureiro(a),\n"
+				+ "\n	Querido" +" Aventureiro(a),\n"
 				+ "Ao longo desta jornada, você enfrentou desafios, desvendou enigmas e tomou decisões que impactaram diretamente a saúde e a beleza do Rio Tietê.\n"
 				+ "Sua participação ativa e compromisso com a causa da preservação ambiental são dignos de louvor.\n";		
 		
@@ -70,7 +63,7 @@ public class Texto_Fase_05 extends Personagem_Principal {
 
 		public String txt12 = "Mais uma vez, obrigado por sua participação e por ser parte desta importante jornada de limpeza e preservação.\n";
 		
-		public String txt13 = "Atenciosamente,";
+		public String txt13 = "Atenciosamente,\n";
 		
 		public String txt14 = "Equipe de Produção Aps 2024 :)\n"
 				+ "--------------------------";

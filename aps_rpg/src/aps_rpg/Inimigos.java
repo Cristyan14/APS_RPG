@@ -1,4 +1,5 @@
 package aps_rpg;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -84,12 +85,35 @@ public class Inimigos{
         }
 
         while (true) {
-            System.out.println("=============== B A T A L H A ===============\n");
-            System.out.println(inimigo.nomeInimigo + "\nHP: " + inimigo.vidaInimigo + "/" + vidaMaxInimigo);
-            System.out.println(jogador.nome + "\nHP: " + jogador.getVida() + "/" + jogador.getMaxVida());
-            System.out.println("\nO que irá fazer?\n");
-            System.out.println("[1] Atacar\n[2] Usar poção de cura\n[3] Pedir arrego\n");
-            int tecla = scanner.nextInt();
+            boolean correto = false;
+            int tecla = 0;
+    		while(!correto) {
+    			try {
+    				 System.out.println("=============== B A T A L H A ===============\n");
+    		            System.out.println(inimigo.nomeInimigo + "\nHP: " + inimigo.vidaInimigo + "/" + vidaMaxInimigo);
+    		            System.out.println(jogador.nome + "\nHP: " + jogador.getVida() + "/" + jogador.getMaxVida());
+    		            System.out.println("\nO que irá fazer?\n");
+    		            System.out.println("[1] Atacar\n[2] Usar poção de cura\n[3] Pedir arrego\n");
+    		            System.out.print("Digite: ");
+    		            System.out.println("--------------------------");
+    		            tecla = scanner.nextInt();
+    		        
+    		        
+    		        if (tecla == 1 || tecla == 2 || tecla == 3) {
+    		            correto = true;
+    		        } else {
+    		            System.out.println("--------------------------");
+    		            System.out.println("Opção inválida!");
+    		            System.out.println("--------------------------");
+    		            pausaBreve();
+    		        }
+    		    } catch (InputMismatchException e) {
+    		        System.out.println("--------------------------");
+    		        System.out.println("Entrada inválida! Por favor, digite um número inteiro.");
+    		        System.out.println("--------------------------");
+    		        pausaBreve();
+    		        scanner.next(); // Limpa o buffer de entrada
+    		    }}		
 
             if (tecla == 1) {
                 // Ataque
@@ -154,7 +178,7 @@ public class Inimigos{
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
-            scanner.close();
+
         }
 
     }
