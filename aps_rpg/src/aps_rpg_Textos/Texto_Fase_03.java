@@ -19,8 +19,7 @@ public class Texto_Fase_03  extends Personagem_Principal{
 			+ "\n--------------------------------------------";
 	
 	public String txt03 = "--------------------------------------------"
-			+ "\nAo optar por pescar, o jogador decide sua vara de pesca lendária, que seu sensei lhe deu."
-			+ "\n--------------------------------------------";
+			+ "\nAo optar por pescar, o jogador decide sua vara de pesca lendária, que seu sensei lhe deu.";
 			
 		
 	public String txt05 = "--------------------------------------------"
