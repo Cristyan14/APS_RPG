@@ -79,10 +79,7 @@ public class Fase_3 extends Personagem_Principal {
 		boolean correto = false;
 		while(!correto) {
 			try {
-				System.out.println("--------------------------");
-		        System.out.println("Digite [1] para investigar os Esgotos Industriais.");
-		        System.out.println("Digite [2] para investigar o Descarte irregular de lixo.");
-		        System.out.println("----------------------------------------------");
+			System.out.println(texto_fase_03.txt02);
 		        System.out.print("Digite: ");
 		        opcao = escrever.nextInt();
 		        pausaBreve();
