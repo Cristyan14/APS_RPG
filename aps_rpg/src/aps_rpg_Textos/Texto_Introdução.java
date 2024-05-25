@@ -23,17 +23,7 @@ public class Texto_Introdução extends Personagem_Principal{
 	
 	public String txt03 = "Boa sorte caro jogador, sua jornada será longa, desejo a você toda sorte e acima de tudo cuidado...";
 	
-	public String getTxt01() {
-		return txt01;
-	}
-
-	public String getTxt02() {
-		return txt02;
-	}
-
-	public String getTxt03() {
-		return txt03;
-	}
+	
 
 
 	
