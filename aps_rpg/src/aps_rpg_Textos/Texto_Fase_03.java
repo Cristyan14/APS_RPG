@@ -44,26 +44,8 @@ public class Texto_Fase_03  extends Personagem_Principal{
 			+ "\n--------------------------------------------";
 	
 
-	public String getTxt01() {
-		return txt01;
-	}
 
-	public String getTxt02() {
-		return txt02;
-	}
-
-	public String getTxt03() {
-		return txt03;
-	}
-
-
-	public String getTxt05() {
-		return txt05;
-	}
-
-	public String getTxt06() {
-		return txt06;
-	}
+	
 	
 	
 }
