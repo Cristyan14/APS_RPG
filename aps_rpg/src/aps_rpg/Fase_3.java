@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 import aps_rpg_Textos.Texto_Fase_03;
 
-public class Fase_3 extends Personagem_Principal {
-	public Fase_3(String nome) {
+public class Fase_3 extends Personagem_Principal { // Herança
+	public Fase_3(String nome) { // Método Construtor
 		super(nome);
 		// TODO Auto-generated constructor stub
 	}
@@ -33,24 +33,24 @@ public class Fase_3 extends Personagem_Principal {
 	}
 	
 	
-	public boolean getEscolhaA() {
+	public boolean getEscolhaA() { // Encapsulamento
 		return escolhaA;
 	}
 
-	public void setEscolhaA(boolean escolhaA) {
+	public void setEscolhaA(boolean escolhaA) { // Encapsulamento
 		this.escolhaA = escolhaA;
 	}
 
-	public boolean getEscolhaB() {
+	public boolean getEscolhaB() { // Encapsulamento
 		return escolhaB;
 	}
 
-	public void setEscolhaB(boolean escolhaB) {
+	public void setEscolhaB(boolean escolhaB) { // Encapsulamento
 		this.escolhaB = escolhaB;
 	}
 	
 	public void pausaBreve() {
-	    try {
+	    try { // Exceções
 	        Thread.sleep(2000); // Pausa por 2 segundo
 	    } catch (InterruptedException e) {
 	        e.printStackTrace();
@@ -182,7 +182,7 @@ public class Fase_3 extends Personagem_Principal {
 
 				boolean correto1 = false;
 				while(!correto1) {
-					try {
+					try {// Exceções
 						System.out.println(texto_fase_03.txt06);
 				        System.out.print("Digite: ");
 				        opcao = escrever.nextInt();
