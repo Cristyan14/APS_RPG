@@ -6,19 +6,19 @@ import java.util.TimerTask;
 
 import aps_rpg_Textos.Texto_Introdução;
 
-public class Introducao extends Personagem_Principal {
+public class Introducao extends Personagem_Principal { // Herança
     private Scanner escrever;
 	private Texto_Introdução textoIntroducao;
 	private long delayp = 4000L; // 5 segundos em milissegundos
     Timer timer = new Timer();
 	
-	public Introducao(Scanner escrever, String nick) {
+	public Introducao(Scanner escrever, String nick) { // Método do Construtor
 		super(nick);
 		this.setEscrever(escrever);
 		textoIntroducao = new Texto_Introdução(nick);
 	}
 	public void pausaBreve() {
-	    try {
+	    try { // Exceções
 	        Thread.sleep(2000); // Pausa por 2 segundo
 	    } catch (InterruptedException e) {
 	        e.printStackTrace();
@@ -76,11 +76,11 @@ public class Introducao extends Personagem_Principal {
          }
 	}
 
-	public Scanner getEscrever() {
+	public Scanner getEscrever() { // Encapsulamento
 		return escrever;
 	}
 
-	public void setEscrever(Scanner escrever) {
+	public void setEscrever(Scanner escrever) { // Encapsulamento
 		this.escrever = escrever;
 	}
 
