@@ -31,7 +31,7 @@ public class Fase_1 extends Personagem_Principal{ // Herança
 		}
 
 		public void pausaBreve(int valor) {
-		    try {
+		    try {// Exceções
 		        Thread.sleep(valor); // Pausa por 2 segundo
 		    } catch (InterruptedException e) {
 		        e.printStackTrace();
@@ -98,24 +98,24 @@ public class Fase_1 extends Personagem_Principal{ // Herança
 		public boolean a = false;
 		public boolean b = false;
 		private long delayp;
-		public boolean getA() {
+		public boolean getA() {// Encapsulamento
 			return a;
 		}
-		public void setA(boolean a) {
+		public void setA(boolean a) {// Encapsulamento
 			this.a = a;
 		}
-		public boolean getB() {
+		public boolean getB() {// Encapsulamento
 			return b;
 		}
-		public void setB(boolean b) {
+		public void setB(boolean b) {// Encapsulamento
 			this.b = b;
 		}
 		
 		
-		 public int getValor() {
+		 public int getValor() {// Encapsulamento
 			return valor;
 		}
-		public void setValor(int valor) {
+		public void setValor(int valor) {// Encapsulamento
 			this.valor = valor;
 		}
 		public int verificar() {
@@ -194,7 +194,7 @@ public class Fase_1 extends Personagem_Principal{ // Herança
 					System.out.println("Ao iniciar usa jornada "+ this.nome + ", você percebe algumas fontes de poluição.");
 					pausaBreve(4000);
 					while(!correto) {
-					try {
+					try {// Exceções
 				        System.out.println("Digite [1] para investigar os Esgotos Industriais.");
 				        System.out.println("Digite [2] para investigar o Descarte irregular de lixo.");
 				        System.out.println("----------------------------------------------");
