@@ -8,31 +8,31 @@ public class Inimigos{
     public String nomeInimigo;
     public int ataqueInimigo;
     
-    public int getAtaqueInimigo() {
+    public int getAtaqueInimigo() { // Encapsulamento
 		return ataqueInimigo;
 	}
 
-	public void setAtaqueInimigo(int ataqueInimigo) {
+	public void setAtaqueInimigo(int ataqueInimigo) { // Encapsulamento
 		this.ataqueInimigo = ataqueInimigo;
 	}
 	
-	public int getVidaInimigo() {
+	public int getVidaInimigo() { // Encapsulamento
 		return vidaInimigo;
 	}
 
-	public void setVidaInimigo(int vidaInimigo) {
+	public void setVidaInimigo(int vidaInimigo) { // Encapsulamento
 		this.vidaInimigo = vidaInimigo;
 	}
 
-	public String getNomeInimigo() {
+	public String getNomeInimigo() { // Encapsulamento
 		return nomeInimigo;
 	}
 
-	public void setNomeInimigo(String nomeInimigo) {
+	public void setNomeInimigo(String nomeInimigo) { // Encapsulamento
 		this.nomeInimigo = nomeInimigo;
 	}
 
-    public Inimigos() {
+    public Inimigos() { // Método Construtor
         Random rand = new Random();
         this.nomeInimigo = escolherNome(rand);
         this.ataqueInimigo = 6 + rand.nextInt(5); // Gera um número entre 6 e 10
@@ -62,7 +62,7 @@ public class Inimigos{
     }
     
     public static void pausaBreve() {
-	    try {
+	    try { // Exceções
 	        Thread.sleep(5000); // Pausa por 2 segundo
 	    } catch (InterruptedException e) {
 	        e.printStackTrace();
@@ -76,7 +76,7 @@ public class Inimigos{
         Random rand = new Random();
 
         System.out.println("Um horripilante " + inimigo.nomeInimigo + " se aproxima!!!!");
-        try {
+        try { // Exceções
             for (int i = 5; i > 0; i--) {
                 Thread.sleep(1000); // Espera por 1 segundo
             }
@@ -88,7 +88,7 @@ public class Inimigos{
             boolean correto = false;
             int tecla = 0;
     		while(!correto) {
-    			try {
+    			try { //Exceções
     				 System.out.println("=============== B A T A L H A ===============\n");
     		            System.out.println(inimigo.nomeInimigo + "\nHP: " + inimigo.vidaInimigo + "/" + vidaMaxInimigo);
     		            System.out.println(jogador.nome + "\nHP: " + jogador.getVida() + "/" + jogador.getMaxVida());
@@ -173,7 +173,7 @@ public class Inimigos{
             }
 
             // Espera por um momento antes de limpar o console
-            try {
+            try { // Exceções
                 Thread.sleep(2000); // Espera por 2 segundos antes de continuar
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
