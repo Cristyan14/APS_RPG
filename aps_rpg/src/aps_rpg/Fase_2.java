@@ -6,9 +6,9 @@ import java.util.Scanner;
 import aps_rpg_Textos.Texto_Fase_01;
 import aps_rpg_Textos.Texto_Fase_02;
 
-public class Fase_2 extends Personagem_Principal {
+public class Fase_2 extends Personagem_Principal { // Herança
 	
-	public Fase_2(String nome) {
+	public Fase_2(String nome) { // Método Construtor
 		super(nome);
 		// TODO Auto-generated constructor stub
 	}
