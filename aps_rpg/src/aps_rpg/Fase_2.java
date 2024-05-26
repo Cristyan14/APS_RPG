@@ -78,7 +78,7 @@ public class Fase_2 extends Personagem_Principal { // Herança
 
                 // Tenta desviar dos detritos
                 int escolhaDesvio = 0;
-                try {
+                try { // Exceções
                 	System.out.print("Digite: ");
                     escolhaDesvio = scanner.nextInt();
                 } catch (InputMismatchException e) {
@@ -121,7 +121,7 @@ public class Fase_2 extends Personagem_Principal { // Herança
             
 
             int escolhaAcao = 0;
-            try {
+            try { // Exceções
                 escolhaAcao = scanner.nextInt();
             } catch (InputMismatchException e) {
             	 pausaBreve();
