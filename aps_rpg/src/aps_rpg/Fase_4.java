@@ -2,16 +2,16 @@ package aps_rpg;
 
 import aps_rpg_Textos.Texto_Fase_04;
 
-public class Fase_4 extends Personagem_Principal{
+public class Fase_4 extends Personagem_Principal{ // Herança
 
-	public Fase_4(String nome) {
+	public Fase_4(String nome) { // Método Construtor
 		super(nome);
 	}
 	
 	Texto_Fase_04 texto_fase_04 = new Texto_Fase_04(nome);
 	
 	public void pausaBreve() {
-	    try {
+	    try { // Exceções
 	        Thread.sleep(3000); 
 	    } catch (InterruptedException e) {
 	        e.printStackTrace();
