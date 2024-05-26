@@ -7,31 +7,31 @@
 		public String nomePeixe;
 		public int ataquePeixe;
 	    
-	    public int getAtaquePeixe() {
+	    public int getAtaquePeixe() { // Encapsulamento
 			return ataquePeixe;
 		}
 
-		public void setAtaquePeixeo(int ataquePeixe) {
+		public void setAtaquePeixeo(int ataquePeixe) { // Encapsulamento
 			this.ataquePeixe = ataquePeixe;
 		}
 		
-		public int getVidaPeixe() {
+		public int getVidaPeixe() { // Encapsulamento
 			return vidaPeixe;
 		}
 
-		public void setVidaPeixe(int vidaPeixe) {
+		public void setVidaPeixe(int vidaPeixe) { // Encapsulamento
 			this.vidaPeixe = vidaPeixe;
 		}
 
-		public String getNomePeixe() {
+		public String getNomePeixe() { // Encapsulamento
 			return nomePeixe;
 		}
 
-		public void setNomePeixe(String nomePeixe) {
+		public void setNomePeixe(String nomePeixe) { // Encapsulamento
 			this.nomePeixe = nomePeixe;
 		}
 
-	    public Inimigos_Peixes() {
+	    public Inimigos_Peixes() { // Método Construtor
 	        Random rand = new Random();
 	        this.nomePeixe = escolherNome(rand);
 	        this.ataquePeixe = 6 + rand.nextInt(5); // Gera um número entre 6 e 10
@@ -61,7 +61,7 @@
 	    }
 	    
 	    public static void pausaBreve() {
-		    try {
+		    try { // Exceções
 		        Thread.sleep(5000); // Pausa por 2 segundo
 		    } catch (InterruptedException e) {
 		        e.printStackTrace();
@@ -76,7 +76,7 @@
 	        System.out.println("--------------------------------------------");
 	        System.out.println("Das profundesas... " + inimigo.nomePeixe + " emerge!!!!");
 	        System.out.println("--------------------------------------------");
-	        try {
+	        try { // Exceções
 	            for (int i = 5; i > 0; i--) {
 	                Thread.sleep(1000); // Espera por 1 segundo
 	            }
@@ -152,7 +152,7 @@
 	            }
 
 	            // Espera por um momento antes de limpar o console
-	            try {
+	            try { // Exceções
 	                Thread.sleep(2000); // Espera por 2 segundos antes de continuar
 	            } catch (InterruptedException e) {
 	                Thread.currentThread().interrupt();
