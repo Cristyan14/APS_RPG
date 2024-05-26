@@ -9,11 +9,11 @@ import java.util.TimerTask;
 import aps_rpg_Textos.Texto_Fase_01;
 import aps_rpg_Textos.Texto_Fase_03;
 
-public class Fase_1 extends Personagem_Principal{
+public class Fase_1 extends Personagem_Principal{ // Herança
 	
 		private Scanner escrever = new Scanner(System.in);
 		private long delay = 4000L;
-		public Fase_1(String nome) {
+		public Fase_1(String nome) { // Método Construtor
 			super(nome);
 			nome = this.nome;
 
